@@ -7,6 +7,10 @@
 	<!-- 元数据包 -->
 	<package name="com.panet.imeta" extends="struts-default">
 		<action name="ImetaAction" class="imeta.ui.imetaAction" />
+		<action name="ImetaDBAction" class="imeta.ui.imetaDBAction" />
+		<action name="ImetaDIAction" class="imeta.ui.imetaDIAction" />
+		<action name="ImetaTransAction" class="imeta.ui.imetaTransAction" />
+		<action name="ImetaJobAction" class="imeta.ui.imetaJobAction" />
 		<action name="ImetaLogAction" class="imeta.ui.imetaLogAction" />  
 		<action name="FileUploadAction" class="imeta.ui.fileUploadAction">
 			<!-- 动态设置Action中的savePath属性的值 -->

@@ -173,7 +173,7 @@ public class GetFileNamesDialog extends BaseStepDialog implements
 							.isFileField()), InputDataMeta.INPUT_TYPE_CHECKBOX,
 					ValidateForm.getInstance().setRequired(true));
 			this.filenameDefined
-					.addClick("jQuery.imeta.steps.GetFileNames.listeners.filenameDefinedListeners");
+					.addClick("jQuery.imeta.steps.getfilenames.listeners.filenameDefinedListeners");
 			// Get Filename from field
 			this.dynamicFilenameField = new LabelSelectMeta(id
 					+ ".dynamicFilenameField", "从哪个字段读取文件名", null, null, null,
@@ -223,7 +223,7 @@ public class GetFileNamesDialog extends BaseStepDialog implements
 			this.selectedFiles.setSingle(true);
 			this.selectedFiles.setHasBottomBar(true);
 			this.selectedFiles.setHasAdd(true, !isFileField,
-					"jQuery.imeta.steps.GetFileNames.btn.fieldAdd");
+					"jQuery.imeta.steps.getfilenames.btn.fieldAdd");
 			this.selectedFiles.setHasDelete(true, !isFileField,
 					"jQuery.imeta.parameter.fieldsDelete");
 
