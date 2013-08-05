@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1.0"
+    android:gravity="left|center"
+    android:orientation="vertical"
+    android:paddingBottom="6.0dip"
+    android:paddingTop="6.0dip" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/MMFontPreferenceLarge"
+            android:layout_width="73.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6.0dip"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/firstDomainMail"
+            style="@style/MMFontPreferenceSummary"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/secondDomainMail"
+        style="@style/MMFontPreferenceSummary"
+        android:layout_marginLeft="79.0dip"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/thirdDomainMail"
+        style="@style/MMFontPreferenceSummary"
+        android:layout_marginLeft="79.0dip"
+        android:singleLine="true" />
+
+</LinearLayout>

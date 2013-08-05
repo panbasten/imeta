@@ -1,0 +1,708 @@
+﻿({
+	"title" : "创建菜单",
+	"link" : "webapp/imeta/js/jquery.imenutab.json",
+	"description" : "用于创建菜单",
+	"modified" : "2009-01-29 07:00",
+	"generator" : "peter",
+	"items" : [{
+		"createTag" : "<div></div>",
+		"attr" : {
+			"id" : "menu_root",
+			"class" : "menu_div"
+		},
+		"items" : [{
+					"createTag" : "<ul></ul>",
+					"attr" : {
+						"id" : "imenutab"
+					},
+					"items" : [{
+						"createTag" : "<li></li>",
+						"type" : "menu",
+						"attr" : {
+							"value" : "start",
+							"label" : "开始",
+							"accessKey" : "alt-f"
+						},
+						"items" : [{
+							"createTag" : "<q></q>",
+							"menuArea" : {
+								"attr" : {
+									"id" : "imenutab-0"
+								},
+								"menuGroups" : [{
+									"attr" : {
+										"id" : "transTools",
+										"label" : "转换",
+										"width" : "280px"
+									},
+									"menuItems" : [{
+										"value" : "startRun",
+										"label" : "运行",
+										"accessKey" : "ctrl-n",
+										"imgCls" : "startRun",
+										"width" : "35px",
+										"btnFn" : "jQuery.imenu.iMenuFn.start.startRun",
+										"enabled" : true
+									},{
+										"value" : "startSuspend",
+										"label" : "暂停",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "startSuspend",
+										"width" : "35px",
+										"btnFn" : "jQuery.imenu.iMenuFn.start.startSuspend",
+										"enabled" : true
+									},{
+										"value" : "startStop",
+										"label" : "停止",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "startStop",
+										"width" : "35px",
+										"btnFn" : "jQuery.imenu.iMenuFn.start.startStop",
+										"enabled" : true
+									},{
+										"value" : "startValidate",
+										"label" : "验证",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "startValidate",
+										"width" : "35px",
+										"btnFn" : "jQuery.imenu.iMenuFn.start.startValidate",
+										"enabled" : true
+									},{
+										"value" : "startAnalysis",
+										"label" : "分析对数据库的影响",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "analysis",
+										"width" : "110px",
+										"btnFn" : "jQuery.imenu.iMenuFn.start.startAnalysis",
+										"enabled" : true
+									}]
+								},{
+									"attr" : {
+										"id" : "jobTools",
+										"label" : "任务",
+										"width" : "123px"
+									},
+									"menuItems" : [{
+										"value" : "jobRun",
+										"label" : "运行",
+										"accessKey" : "ctrl-n",
+										"imgCls" : "startRun",
+										"width" : "35px",
+										"btnFn" : "jQuery.imenu.iMenuFn.start.jobRun",
+										"enabled" : true
+									},{
+										"value" : "jobStop",
+										"label" : "停止",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "startStop",
+										"width" : "35px",
+										"btnFn" : "jQuery.imenu.iMenuFn.start.jobStop",
+										"enabled" : true
+									},{
+										"value" : "jobList",
+										"label" : "列表",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "jobList",
+										"width" : "35px",
+										"btnFn" : "jQuery.imenu.iMenuFn.start.jobList",
+										"enabled" : true
+									}]
+								},{
+									"attr" : {
+										"id" : "",
+										"label" : "显示",
+										"width" : "342px"
+									},
+									"menuItems" : [{
+										"value" : "editObject",
+										"label" : "编辑",
+										"accessKey" : "ctrl-n",
+										"imgCls" : "editObject",
+										"width" : "40px",
+										"btnFn" : "jQuery.imenu.iMenuFn.start.editObject",
+										"enabled" : true,
+										"selected" : false
+									},{
+										"value" : "magnify",
+										"label" : "放大",
+										"accessKey" : "ctrl-n",
+										"imgCls" : "magnify",
+										"width" : "40px",
+										"btnFn" : "jQuery.imenu.iMenuFn.start.magnify",
+										"enabled" : true,
+										"selected" : false
+									},{
+										"value" : "lessen",
+										"label" : "缩小",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "lessen",
+										"width" : "40px",
+										"btnFn" : "jQuery.imenu.iMenuFn.start.lessen",
+										"enabled" : true,
+										"selected" : false
+									},{
+										"value" : "partMagnify",
+										"label" : "局部放大",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "partMagnify",
+										"width" : "50px",
+										"btnFn" : "jQuery.imenu.iMenuFn.start.partMagnify",
+										"enabled" : true,
+										"selected" : false
+									},{
+										"value" : "hundred",
+										"label" : "100%",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "hundred",
+										"width" : "40px",
+										"btnFn" : "jQuery.imenu.iMenuFn.start.hundred",
+										"enabled" : true
+									},{
+										"value" : "proportion",
+										"label" : "合适比例",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "proportion",
+										"width" : "50px",
+										"btnFn" : "jQuery.imenu.iMenuFn.start.proportion",
+										"enabled" : true
+									},{
+										"value" : "screenMove",
+										"label" : "移动",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "screenMove",
+										"width" : "40px",
+										"btnFn" : "jQuery.imenu.iMenuFn.start.screenMove",
+										"enabled" : true
+									}]
+								},{
+									"attr" : {
+										"id" : "",
+										"label" : "网格",
+										"width" : "112px"
+									},
+									"menuItems" : [{
+										"value" : "showGrid",
+										"label" : "显示网格",
+										"accessKey" : "ctrl-n",
+										"imgCls" : "showGrid",
+										"width" : "50px",
+										"btnFn" : "jQuery.imenu.iMenuFn.start.showGrid",
+										"enabled" : true,
+										"selected" : false
+									},{
+										"value" : "closeTOGrid",
+										"label" : "贴近网格",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "closeTOGrid",
+										"width" : "50px",
+										"btnFn" : "jQuery.imenu.iMenuFn.start.closeTOGrid",
+										"enabled" : false,
+										"selected" : false
+									}]
+								},{
+									"attr" : {
+										"id" : "",
+										"label" : "剪切板",
+										"width" : "123px"
+									},
+									"menuItems" : [{
+										"value" : "startCut",
+										"label" : "剪切",
+										"accessKey" : "ctrl-n",
+										"imgCls" : "startCut",
+										"width" : "35px",
+										"btnFn" : "jQuery.imenu.iMenuFn.start.startCut",
+										"enabled" : true
+									},{
+										"value" : "startCopy",
+										"label" : "复制",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "startCopy",
+										"width" : "35px",
+										"btnFn" : "jQuery.imenu.iMenuFn.start.startCopy",
+										"enabled" : true
+									},{
+										"value" : "startAffix",
+										"label" : "粘贴",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "startAffix",
+										"width" : "35px",
+										"btnFn" : "jQuery.imenu.iMenuFn.start.startAffix",
+										"enabled" : false
+									}]
+								}]
+							}
+						}]
+					},{
+						"createTag" : "<li></li>",
+						"type" : "menu",
+						"attr" : {
+							"value" : "file",
+							"label" : "文件",
+							"accessKey" : "alt-f"
+						},
+						"items" : [{
+							"createTag" : "<q></q>",
+							"menuArea" : {
+								"attr" : {
+									"id" : "imenutab-1"
+								},
+								"menuGroups" : [{
+									"attr" : {
+										"id" : "",
+										"label" : "用户",
+										"width" : "228px"
+									},
+									"menuItems" : [{
+										"value" : "createUser",
+										"label" : "创建新用户",
+										"accessKey" : "ctrl-n",
+										"imgCls" : "createUser",
+										"width" : "70px",
+										"btnFn" : "jQuery.imenu.iMenuFn.file.createUser",
+										"enabled" : true
+									},{
+										"value" : "deleteUser",
+										"label" : "删除用户",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "deleteUser",
+										"width" : "50px",
+										"btnFn" : "jQuery.imenu.iMenuFn.file.deleteUser",
+										"enabled" : true
+									},{
+										"value" : "editCurrentUser",
+										"label" : "编辑当前用户",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "editCurrentUser",
+										"width" : "90px",
+										"btnFn" : "jQuery.imenu.iMenuFn.file.editCurrentUser",
+										"enabled" : true
+									}]
+								},{
+									"attr" : {
+										"id" : "",
+										"label" : "资源库",
+										"width" : "152px"
+									},
+									"menuItems" : [{
+										"value" : "connectRep",
+										"label" : "连接资源库",
+										"accessKey" : "ctrl-n",
+										"imgCls" : "connectRep",
+										"width" : "70px",
+										"btnFn" : "jQuery.imenu.iMenuFn.file.connectRep",
+										"enabled" : true
+									},{
+										"value" : "detectRep",
+										"label" : "探测资源库",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "detectRep",
+										"width" : "70px",
+										"btnFn" : "jQuery.imenu.iMenuFn.file.detectRep",
+										"enabled" : true
+									}]
+								},{
+									"attr" : {
+										"id" : "",
+										"label" : "新建",
+										"width" : "188px"
+									},
+									"menuItems" : [{
+										"value" : "fileNewTrans",
+										"label" : "ETL转换",
+										"accessKey" : "ctrl-n",
+										"imgCls" : "fileNewTrans",
+										"width" : "50px",
+										"btnFn" : "jQuery.imenu.iMenuFn.file.fileNewTrans",
+										"enabled" : true
+									},{
+										"value" : "fileNewJob",
+										"label" : "ETL任务",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "fileNewJob",
+										"width" : "50px",
+										"btnFn" : "jQuery.imenu.iMenuFn.file.fileNewJob",
+										"enabled" : true
+									},{
+										"value" : "startAddDatabase",
+										"label" : "添加数据库",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "startAddDatabase",
+										"width" : "70px",
+										"btnFn" : "jQuery.imenu.iMenuFn.file.startAddDatabase",
+										"enabled" : true
+									}]
+								},{
+									"attr" : {
+										"id" : "",
+										"label" : "打开",
+										"width" : "142px"
+									},
+									"menuItems" : [{
+										"value" : "fileOpen",
+										"label" : "打开",
+										"accessKey" : "ctrl-n",
+										"imgCls" : "fileOpen",
+										"width" : "40px",
+										"btnFn" : "jQuery.imenu.iMenuFn.file.fileOpen",
+										"enabled" : true
+									},{
+										"value" : "fromXMLToOpen",
+										"label" : "从XML文件打开",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "fromXMLToOpen",
+										"width" : "90px",
+										"btnFn" : "jQuery.imenu.iMenuFn.file.fromXMLToOpen",
+										"enabled" : true
+									}]
+								},{
+									"attr" : {
+										"id" : "",
+										"label" : "保存",
+										"width" : "198px"
+									},
+									"menuItems" : [{
+										"value" : "fileSave",
+										"label" : "保存",
+										"accessKey" : "ctrl-n",
+										"imgCls" : "fileSave",
+										"width" : "40px",
+										"btnFn" : "jQuery.imenu.iMenuFn.file.fileSave",
+										"enabled" : true
+									},{
+										"value" : "fileSaveAs",
+										"label" : "另存为",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "fileSaveAs",
+										"width" : "50px",
+										"btnFn" : "jQuery.imenu.iMenuFn.file.fileSaveAs",
+										"enabled" : true
+									},{
+										"value" : "fileSavedAsXML",
+										"label" : "保存为XML文件",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "fileSavedAsXML",
+										"width" : "90px",
+										"btnFn" : "jQuery.imenu.iMenuFn.file.fileSavedAsXML",
+										"enabled" : true
+									}]
+								},{
+									"attr" : {
+										"id" : "",
+										"label" : "关闭",
+										"width" : "158px"
+									},
+									"menuItems" : [{
+										"value" : "fileClose",
+										"label" : "关闭",
+										"accessKey" : "ctrl-n",
+										"imgCls" : "fileClose",
+										"width" : "40px",
+										"btnFn" : "jQuery.imenu.iMenuFn.file.fileClose",
+										"enabled" : true
+									},{
+										"value" : "turnOffOther",
+										"label" : "关闭其他",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "turnOffOther",
+										"width" : "50px",
+										"btnFn" : "jQuery.imenu.iMenuFn.file.turnOffOther",
+										"enabled" : true
+									},{
+										"value" : "turnOffAll",
+										"label" : "关闭全部",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "turnOffAll",
+										"width" : "50px",
+										"btnFn" : "jQuery.imenu.iMenuFn.file.turnOffAll",
+										"enabled" : true
+									}]
+								}]
+							}
+						}]
+					},{
+						"createTag" : "<li></li>",
+						"type" : "menu",
+						"attr" : {
+							"value" : "wizard",
+							"label" : "向导",
+							"accessKey" : "alt-f"
+						},
+						"items" : [{
+							"createTag" : "<q></q>",
+							"menuArea" : {
+								"attr" : {
+									"id" : "imenutab-2"
+								},
+								"menuGroups" : [{
+									"attr" : {
+										"id" : "",
+										"label" : "创建数据库连接",
+										"width" : "100px"
+									},
+									"menuItems" : [{
+										"value" : "createDatabase",
+										"label" : "创建数据库连接",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "createDatabase",
+										"width" : "94px",
+										"btnFn" : "jQuery.imenu.iMenuFn.wizard.createDatabase",
+										"enabled" : true
+									}]
+								},{
+									"attr" : {
+										"id" : "",
+										"label" : "复制表",
+										"width" : "100px"
+									},
+									"menuItems" : [{
+										"value" : "copyTable",
+										"label" : "复制表",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "copyTable",
+										"width" : "94px",
+										"btnFn" : "jQuery.imenu.iMenuFn.wizard.copyTable",
+										"enabled" : true
+									}]
+								},{
+									"attr" : {
+										"id" : "",
+										"label" : "启动项",
+										"width" : "100px"
+									},
+									"menuItems" : [{
+										"value" : "jobStart",
+										"label" : "任务",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "jobStart",
+										"width" : "94px",
+										"btnFn" : "jQuery.imenu.iMenuFn.wizard.jobStart",
+										"enabled" : true
+									}]
+								}]
+							}
+						}]
+					},{
+						"createTag" : "<li></li>",
+						"type" : "menu",
+						"attr" : {
+							"value" : "windows",
+							"label" : "窗口",
+							"accessKey" : "alt-f"
+						},
+						"items" : [{
+							"createTag" : "<q></q>",
+							"menuArea" : {
+								"attr" : {
+									"id" : "imenutab-3"
+								},
+								"menuGroups" : [{
+									"attr" : {
+										"id" : "",
+										"label" : "iMeta工具箱",
+										"width" : "100px"
+									},
+									"menuItems" : [{
+										"value" : "imbMenu",
+										"label" : "iMeta工具箱",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "toolbox-ETL",
+										"width" : "94px",
+										"btnFn" : "jQuery.imenu.iMenuFn.windows.imbMenu",
+										"enabled" : true,
+										"selected" : true
+									}]
+								},{
+									"attr" : {
+										"id" : "",
+										"label" : "对象视图",
+										"width" : "100px"
+									},
+									"menuItems" : [{
+										"value" : "iovMenu",
+										"label" : "对象视图",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "objectView",
+										"width" : "94px",
+										"btnFn" : "jQuery.imenu.iMenuFn.windows.iovMenu",
+										"enabled" : true,
+										"selected" : true
+									}]
+								},{
+									"attr" : {
+										"id" : "",
+										"label" : "缩微视图",
+										"width" : "100px"
+									},
+									"menuItems" : [{
+										"value" : "iowMenu",
+										"label" : "缩微视图",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "viewPreview",
+										"width" : "94px"	,
+										"btnFn" : "jQuery.imenu.iMenuFn.windows.iowMenu",
+										"enabled" : true,
+										"selected" : true
+									}]
+								}]
+							}
+						}]
+					},{
+						"createTag" : "<li></li>",
+						"type" : "menu",
+						"attr" : {
+							"value" : "help",
+							"label" : "帮助",
+							"accessKey" : "alt-f"
+						},
+						"items" : [{
+							"createTag" : "<q></q>",
+							"menuArea" : {
+								"attr" : {
+									"id" : "imenutab-4"
+								},
+								"menuGroups" : [{
+									"attr" : {
+										"id" : "plugin",
+										"label" : "插件信息",
+										"width" : "192px"
+									},
+									"menuItems" : [{
+										"value" : "showStepPlugin",
+										"label" : "显示步骤插件",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "showStepPlugin",
+										"width" : "90px",
+										"btnFn" : "jQuery.imenu.iMenuFn.help.showStepPlugin",
+										"enabled" : true
+									},{
+										"value" : "showEntryPlugin",
+										"label" : "显示任务插件",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "showEntryPlugin",
+										"width" : "90px",
+										"btnFn" : "jQuery.imenu.iMenuFn.help.showEntryPlugin",
+										"enabled" : true
+									}]
+								},{
+									"attr" : {
+										"id" : "",
+										"label" : "系统",
+										"width" : "100px"
+									},
+									"menuItems" : [{
+										"value" : "about",
+										"label" : "关于",
+										"accessKey" : "ctrl-alt-n",
+										"imgCls" : "about",
+										"width" : "94px",
+										"btnFn" : "jQuery.imenu.iMenuFn.help.about",
+										"enabled" : true
+									}]
+								}]
+							}
+						}]
+					}]
+				}]
+			},{
+				"createTag" : "<div class='x-tab-panel-header x-unselectable x-tab-scrolling x-tab-scrolling-top' style='-moz-user-select: none;'></div>",
+				"attr" : {
+					"id" : "portal_tab"
+				},
+				"items" : [{
+					"createTag" : "<div id='portalTabScrollerRight' class='x-tab-scroller-right x-unselectable'></div>"
+				},{
+					"createTag" : "<div id='portalTabScrollerLeft' class='x-tab-scroller-left x-unselectable'></div>"
+				},{
+					"createTag" : "<div class='x-tab-strip-wrap'></div>",
+					"items" : [{
+						"createTag" : "<ul class='x-tab-strip x-tab-strip-top'></ul>",
+						"items" : [{
+							"createTag" : "<li class='x-tab-strip-closable x-tab-with-icon'></li>",
+							"items" : [{
+								"createTag" : "<a class='x-tab-right' onclick='return false;' href='#'></a>",
+								"items" : [{
+									"createTag" : "<em class='x-tab-left'></em>",
+									"items" : [{
+										"createTag" : "<span class='x-tab-strip-inner' style='width: 16px;'></span>",
+										"items" : [{
+											"createTag" : "<span class='x-tab-strip-text tab-home'>　</span>"
+										}]
+									}]
+								}]
+							}]
+						},{
+							"createTag" : "<li id='portalTabEdge' class='x-tab-edge'></li>"
+						},{
+							"createTag" : "<div class='x-clear'></div>"
+						}]
+					}]
+				}]
+			},{
+				"createTag" : "<div></div>",
+				"attr" : {
+					"id" : "portal_content"
+				}
+			},{
+				"createTag" : "<div></div>",
+				"attr" : {
+					"class" : "x-btn-common"
+				},
+				"topMenus" : [{
+					"value" : "undo",
+					"title" : "后退",
+					"imgCls" : "undo",
+					"btnFn" : "jQuery.imenu.iMenuFn.top.undo",
+					"enabled" : false
+				},{
+					"value" : "redo",
+					"title" : "前进",
+					"imgCls" : "redo",
+					"btnFn" : "jQuery.imenu.iMenuFn.top.redo",
+					"enabled" : false
+				},{
+					"value" : "commonNew",
+					"title" : "新建",
+					"imgCls" : "commonNew",
+					"btnFn" : "jQuery.imenu.iMenuFn.top.commonNew",
+					"enabled" : true
+				},{
+					"value" : "commonCopy",
+					"title" : "保存",
+					"imgCls" : "commonCopy",
+					"btnFn" : "jQuery.imenu.iMenuFn.file.fileSave",
+					"enabled" : true
+				},{
+					"value" : "commonExportPNG",
+					"title" : "导出为PNG文件",
+					"imgCls" : "commonExportPNG",
+					"btnFn" : "jQuery.imenu.iMenuFn.top.commonExportPNG",
+					"enabled" : true
+				},{
+					"value" : "commonExportXML",
+					"title" : "导出为XML文件",
+					"imgCls" : "commonExportXML",
+					"btnFn" : "jQuery.imenu.iMenuFn.file.fileSavedAsXML",
+					"enabled" : true
+				},{
+					"value" : "commonCollapse",
+					"title" : "隐藏＼显示界面菜单",
+					"imgCls" : "commonCollapse",
+					"btnFn" : "jQuery.imenu.iMenuFn.top.commonCollapse",
+					"enabled" : true
+				},{
+					"value" : "commonMin",
+					"title" : "最大化＼最小化操作台",
+					"imgCls" : "commonMin",
+					"btnFn" : "jQuery.imenu.iMenuFn.top.commonMin",
+					"enabled" : true
+				},{
+					"value" : "logout",
+					"title" : "注销",
+					"imgCls" : "logout",
+					"btnFn" : "jQuery.imenu.iMenuFn.top.logout",
+					"enabled" : true
+				}]
+				
+			}]
+})

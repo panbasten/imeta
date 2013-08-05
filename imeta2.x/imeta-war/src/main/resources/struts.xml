@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<include file="struts-default.xml" />
+	<!-- 元数据包 -->
+	<package name="com.panet.imeta" extends="struts-default">
+		<action name="ImetaAction" class="imeta.ui.imetaAction" />
+		<action name="ImetaLogAction" class="imeta.ui.imetaLogAction" />  
+		<action name="FileUploadAction" class="imeta.ui.fileUploadAction">
+			<!-- 动态设置Action中的savePath属性的值 -->
+			<param name="savePath">/upload</param>
+		</action>
+	</package> 
+
+</struts>

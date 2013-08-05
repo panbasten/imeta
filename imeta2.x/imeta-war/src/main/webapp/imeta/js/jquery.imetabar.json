@@ -1,0 +1,16 @@
+({
+	"title" : "创建工具箱",
+	"link" : "webapp/imeta/js/jquery.imetabar.json",
+	"description" : "用于创建工具箱",
+	"modified" : "2009-01-20 12:34",
+	"generator" : "peter",
+	"items" : [{
+				"createTag" : "<div></div>",
+				"attr" : {
+					"id" : "imb",
+					"class" : "toolbar",
+					"style" : "right:210px;float:right;position:absolute;"
+				},
+				"loadUrl" : "ImetaAction!loadToolbarTab.action"
+			}]
+})

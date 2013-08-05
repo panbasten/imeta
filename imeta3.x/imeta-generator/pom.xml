@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.plywet.imeta</groupId>
+	<artifactId>generator</artifactId>
+	<name>平台生成工具通用代码包</name>
+	<version>3.0-SNAPSHOT</version>
+	<parent>
+		<artifactId>imeta</artifactId>
+		<groupId>com.plywet</groupId>
+		<version>3.0-SNAPSHOT</version>
+	</parent>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.plywet.cdk</groupId>
+				<artifactId>maven-xjc-plugin</artifactId>
+				<version>1.0</version>
+				<executions>
+					<execution>
+						<id>apptask</id>
+						<goals>
+							<goal>xjc</goal>
+						</goals>
+						<configuration>
+							<task><![CDATA[
+                <xjc schema="src/main/resources/META-INF/schema/apptemplate.xsd" package="com.plywet.imeta.builder.templates.app" />
+              				]]></task>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<inherited>true</inherited>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+					<encoding>utf-8</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+
+		<dependency>
+			<groupId>jaxb</groupId>
+			<artifactId>jaxb-xjc</artifactId>
+			<version>2.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>jaxb</groupId>
+			<artifactId>jaxb-impl</artifactId>
+			<version>2.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>jaxb</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>jaxen</groupId>
+			<artifactId>jaxen</artifactId>
+			<version>1.1</version>
+		</dependency>
+
+	</dependencies>
+
+</project>

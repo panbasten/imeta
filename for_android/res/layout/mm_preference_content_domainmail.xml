@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1.0"
+    android:gravity="left|center"
+    android:minHeight="60.0dip"
+    android:orientation="vertical"
+    android:paddingLeft="6.0dip" >
+
+    <TextView
+        android:id="@android:id/title"
+        style="@style/MMFontPreferenceLarge"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@android:id/summary"
+        style="@style/MMFontPreferenceSmall"
+        android:singleLine="true" />
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+{
+	"title" : "缩微视图",
+	"link" : "webapp/framework/js/portal/jquery.ioverview.json",
+	"description" : "用于查看操作平台的缩微图",
+	"modified" : "2009-01-20 12:34",
+	"generator" : "Peter",
+	"items" : [{
+		"createTag" : "<div></div>",
+		"attr" : {
+			"id" : "iow",
+			"class" : "toolbar",
+			"style" : "right:0px;float:left;position:absolute;"
+		},
+		"items" : [{
+			"createTag" : "<div></div>",
+			"attr" : {
+				"id" : "iow-tl",
+				"class" : "toolbar-title"
+			},
+			"html" : "缩微视图",
+			"items" : [{
+				"createTag" : "<div></div>",
+				"attr" : {
+					"id" : "iow-min",
+					"class" : "toolbar-min"
+				}
+			}]
+		},{
+			"createTag" : "<div></div>",
+			"attr" : {
+				"id" : "portal_overview",
+				"class" : "toolbar-content",
+				"style" : "height:180px"
+			}
+		}]
+	}]
+}

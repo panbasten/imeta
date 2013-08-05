@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/NavPage" >
+
+    <ScrollView style="@style/MMScroll" >
+
+        <LinearLayout style="@style/MMBody" >
+
+            <TextView
+                style="@style/MMLineLabel"
+                android:layout_weight="1.0"
+                android:text="@string/reg_forgetpwd_mobile_tip" />
+
+            <View style="@style/MMLabelSplit" />
+
+            <LinearLayout
+                style="@style/MMBody"
+                android:orientation="horizontal"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip" >
+
+                <LinearLayout
+                    android:id="@+id/country_code_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/mm_edit"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/country_code"
+                        android:layout_width="48.0dip"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:singleLine="true"
+                        android:text="@string/country_normal_code"
+                        android:textColor="@color/black"
+                        android:textSize="15.0dip" />
+
+                    <TextView
+                        android:id="@+id/country_name"
+                        android:layout_width="48.0dip"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:singleLine="true"
+                        android:text="@string/country_normal_name"
+                        android:textColor="@color/black"
+                        android:textSize="8.0dip" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/forgetpwd_mobile_et"
+                    style="@style/MMLineEditText"
+                    android:layout_height="50.0dip"
+                    android:layout_marginLeft="10.0dip"
+                    android:hint="@string/regbymobile_reg_addr_hint"
+                    android:inputType="phone" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

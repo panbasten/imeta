@@ -1,0 +1,21 @@
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" >
+
+	<h:panelGrid id="#{compId}_content" columns="1" cellspacing="0" styleClass="portal-editable-content" rowClasses="sino-edit-tr" columnClasses="sino-edit-td">
+		<h:panelGroup>
+			<ui:insert />
+			<h:panelGroup styleClass="sino-edit-required" rendered="#{compRequired}">&#160;*</h:panelGroup>
+		</h:panelGroup>
+		
+		<h:panelGroup styleClass="sino-edit-error" style="display:none;">
+			<h:graphicImage style="float:left;" value="./img/misc/error.png"/>
+			<div class="sino-edit-div" style="float:left;">
+				<h:message for="#{compId}"/>
+			</div>
+		</h:panelGroup>
+	</h:panelGrid>
+	
+</ui:composition>

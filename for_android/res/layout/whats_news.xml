@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.plywet.mm.ui.MMGallery
+        android:id="@+id/what_news_gallery"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/whatsnew_bg"
+        android:clickable="true"
+        android:focusable="false"
+        android:spacing="0.0dip"
+        android:unselectedAlpha="1.2" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:background="@null" >
+
+        <com.plywet.mm.ui.MMPageControlView
+            android:id="@+id/what_news_page_control"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="35.0dip"
+            android:background="@null"
+            android:gravity="bottom|center" />
+    </LinearLayout>
+
+</FrameLayout>

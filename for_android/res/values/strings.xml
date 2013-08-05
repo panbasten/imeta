@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">微信</string>
+    <string name="app_tip">提示</string>
+    <string name="app_send">发送</string>
+    <string name="app_sending">正在发送...</string>
+    <string name="app_set">设置</string>
+    <string name="app_back">返回</string>
+    <string name="app_cancel">取消</string>
+    <string name="app_ok">确定</string>
+    <string name="app_save">保存</string>
+    <string name="app_continue">继续</string>
+    <string name="app_nextstep">下一步</string>
+    <string name="app_prevstep">上一步</string>
+    <string name="app_finish">完成</string>
+    <string name="app_find">查找</string>
+    <string name="app_edit">编辑</string>
+    <string name="app_yes">是</string>
+    <string name="app_no">否</string>
+    <string name="app_down_show_nexttime">下次不提示</string>
+    <string name="app_pic">[图片]</string>
+    <string name="app_voice">[语音]</string>
+    <string name="app_video">[视频]</string>
+    <string name="app_waiting">请稍候...</string>
+    <string name="media_ejected">储存卡已拔出，微信头像、图片、对讲及视频功能将暂时不可用</string>
+    <string name="app_loading_data">正在载入数据...</string>
+    <string name="app_empty_string" />
+    <string name="app_new">新建</string>
+    <string name="app_download">下载</string>
+    <string name="app_install">安装</string>
+    <string name="app_canceling">取消中</string>
+    <string name="app_downloading">下载中...</string>
+    <string name="app_download_finish">下载完成</string>
+    <string name="app_download_update_package">微信更新包下载</string>
+    <string name="app_update_package_notify">微信更新包提醒</string>
+    <string name="app_recommend_update">有新版本的微信，推荐更新</string>
+    <string name="app_default">系统默认</string>
+    <string name="app_zh_CN">简体中文</string>
+    <string name="app_zh_TW">繁體中文</string>
+    <string name="app_en">English</string>
+    <string name="app_lang_sys">跟随系统设置</string>
+    <string name="official_nick">微信团队</string>
+    <string name="app_field_qquin">QQ号：</string>
+    <string name="app_field_username">微信号：</string>
+    <string name="app_field_weibo">微博号：</string>
+    <string name="app_field_voice">对讲</string>
+    <string name="app_field_text">文字</string>
+    <string name="app_field_smiley">表情</string>
+    <string name="app_field_pic">图片</string>
+    <string name="app_field_video">视频</string>
+    <string name="share_content">我正在手机上用 #微信#，可以语音对讲，挺好玩的。我的微信号是%s，加我，就点链接 http://weixin.qq.com</string>
+    <string name="settings_netstat_source_total">系统</string>
+    <string name="settings_netstat_source_self">微信</string>
+    <string name="net_warn_show_page">查看详情</string>
+    <string name="net_warn_connecting">连接中...</string>
+    <string name="net_warn_no_network">网络连接不可用</string>
+    <string name="net_warn_server_failed">无法连接到服务器</string>
+    <string name="main_empty_conversation">暂无会话信息</string>
+
+    <!-- 选择登陆 -->
+    <string name="intro_title">微信</string>
+    <string name="intro_create_account_qq">注册</string>
+    <string name="intro_create_account_reg">没有QQ号？使用手机号注册</string>
+    <string name="intro_existed_login">登录</string>
+    <string name="select_login_hint">使用QQ号或微信号登录</string>
+    <string name="select_register_hint">"如果您没有QQ号，可以使用手机号或
+邮箱地址注册"</string>
+    <string name="select_login_by_qq_num">直接用QQ号登录</string>
+    <string name="reg_type_mobile_text">使用手机号注册</string>
+    <string name="reg_type_email_text">使用邮箱帐号注册</string>
+
+    <!-- 登陆 -->
+    <string name="login_title">微信</string>
+    <string name="login_account_hint">QQ号/微信号/手机号</string>
+    <string name="login_password_hint">密码</string>
+    <string name="login_login">登录</string>
+    <string name="login_logining">正在登录...</string>
+    <string name="login_err_title">登录失败</string>
+    <string name="login_err_mailnotverify">邮箱地址未验证，您只能使用微信用户名</string>
+    <string name="login_foget_password">忘记密码?</string>
+
+    <!-- hardcode -->
+    <string name="hardcode_group">多人会话|群聊</string>
+    
+    <!-- main -->
+    <string name="main_exit">退出</string>
+    <string name="main_exit_title">退出微信</string>
+    <string name="main_exit_warning">退出后，您将收不到新的消息。确定要退出？</string>
+    
+    <!-- content -->
+    <string name="contact_search_account_hint">好友的微信号/QQ号/手机号</string>
+	<string name="network_doctor">"您当前的无线网络可能存在问题，建议您改用GPRS网络。
+是否现在去更改设置？"</string>
+
+	<!-- verify -->
+	<string name="verify_account_tip">微信帐号仅支持6-20个字母、数字、下划线或减号，以字母开头</string>
+    <string name="verify_account_tip_short">帐号仅支持6-20个字母、数字、下划线或减号</string>
+    <string name="verify_account_err_start">微信号只能以字母开头</string>
+    <string name="verify_account_err_chinese">不能使用汉字作为微信号</string>
+    <string name="verify_account_err_space">不能使用空格作为微信号</string>
+    <string name="verify_account_err_other">不能使用 %s 作为微信号</string>
+    <string name="verify_account_null_tip">名字不能为空，请重新输入</string>
+    <string name="verify_input_null_tip">输入不能为空，请重新输入</string>
+    <string name="verify_password_null_tip">密码不能为空，请输入密码</string>
+    <string name="verify_username_null_tip">微信帐号不能为空，请输入微信帐号</string>
+    <string name="verify_email_null_tip">邮箱不能为空，请输入邮箱</string>
+    <string name="verify_password_all_num_tip">密码不能是9位以下的纯数字</string>
+    <string name="verify_password_tip">密码必须是6位(含6位)以上的数字和其他字符组合，或者9位(含9位)以上的纯数字</string>
+    <string name="verify_seccode_tip">验证码不能为空</string>
+    <string name="verify_seccode_fail_tip">验证码错误，请重新输入</string>
+    <string name="verify_email_tip">邮箱地址格式不正确，例如：地址里必须包含‘@’、‘.’字符</string>
+    <string name="verify_email_err_tip">邮箱地址错误</string>
+    
+    <!-- 忘记密码 -->
+    <string name="reg_forgetpwd_title">忘记密码</string>
+    <string name="reg_forgetpwd_byqq">通过QQ号找回密码</string>
+    <string name="reg_forgetpwd_bymobile">通过手机找回密码</string>
+    <string name="reg_forgetpwd_byemail">通过Email找回密码</string>
+    <string name="reg_forgetpwd_mobile_tip">请填写您的手机号码，我们会给您的发送一条短信，请点击短信中的链接重置密码。</string>
+    <string name="reg_forgetpwd_mobile_fin">请求成功，请留意短信。</string>
+    
+    <string name="regbymobile_reg_title">填写手机号</string>
+    <string name="regbymobile_reg_addr_hint">请输入您的手机号码</string>
+    <string name="regbymobile_reg_private_tip">您可以用手机号登录微信。并启用手机通讯录匹配，帮您找到通讯录中使用微信的好友。微信不会公开您的手机号给其他用户。</string>
+    <string name="regbymobile_reg_setpwd_title">设置密码</string>
+    <string name="regbymobile_reg_setpwd_fill_pwd">填写密码</string>
+    <string name="regbymobile_reg_setpwd_fill_pwd_again">再次填写确认</string>
+    <string name="regbymobile_reg_setpwd_fill_tip">可使用英文、数字或下划线，不小于6个字。</string>
+    <string name="regbymobile_reg_setpwd_alert_title">提示</string>
+    <string name="regbymobile_reg_setpwd_alert_diff">两次填写的密码不一致</string>
+    <string name="regbymobile_reg_setpwd_alert_more_byte">密码不能超过16个字</string>
+    
+    <!-- address -->
+    <string name="address_title_select_contact">选择联系人</string>
+    <string name="address_title_add_contact">添加参与人</string>
+    <string name="address_searching">正在查找联系人...</string>
+    <string name="address_not_found">用户不存在</string>
+    <string name="address_delcontact">删除联系人</string>
+    <string name="address_delgroupcard">删除群</string>
+    <string name="address_empty_blacklist_tip">没有加入黑名单的联系人</string>
+    <string name="address_title_select_country_code">选择国家和地区代码</string>
+
+	<!-- whats news -->
+	<string name="whats_news_item_add_tip">新增小特性</string>
+    <string name="whats_news_item_tip">马上开始微信之旅吧!</string>
+    <string name="whats_news_item1">语音记事本同步至QQ邮箱记事本</string>
+    <string name="whats_news_item2">支持简体中文，繁体中文与英文显示</string>
+    <string name="whats_news_item3">"
+1.摇一摇和漂流瓶体验优化 
+
+2.支持查看好友来源
+"</string>
+
+	<string name="country_code">1:加拿大:JIANADA,1:阿拉斯加:ALASIJIA,1:巴哈马:BAHAMA,973:巴林:BALIN,880:孟加拉:MENGJIALA,376:安道尔:ANDAOER,54:阿根廷:AGENTING,55:巴西:BAXI,502:瓜地马拉:GUADIMALA,504:宏都拉斯:HONGDOULASI,230:摩里西斯:MOLIXISI,52:墨西哥:MOXIGE,595:巴拉圭:BALAGUI,51:秘鲁:MILU,505:尼加拉瓜:NIJIALAGUA,507:巴拿马:BANAMA,675:巴布亚纽几内亚:BABUYANIUJINEIYA,56:智利:ZHILI,57:哥伦比亚:GELUNBIYA,506:哥斯大黎加:GESIDALIJIA,53:古巴:GUBA,357:赛普勒斯:SAIPULESI,1:多明尼加:DUOMINGNIJIA,593:厄瓜多:EGUADUO,358:芬兰:FENLAN,33:法国:FAGUO,49:德国:DEGUO,350:直布罗陀:ZHIBULUOTUO,1:格瑞那达:GERUINEIDA,43:奥地利:AODILI,420:捷克:JIEKE,45:丹麦:DANMAI,509:海地:HAIDI,32:比利时:BILISHI,501:贝里斯:BEILISI,975:不丹:BUDAN,591:玻利维亚:BOLIWEIYA,30:希腊:XILA,36:匈牙利:XIONGYALI,354:冰岛:BINGDAO,47:挪威:NUOWEI,98:伊朗:YILANG,964:伊拉克:YILAKE,7:俄罗斯:ELUOSI,965:科威特:KEWEITE,961:黎巴嫩:LIBANEN,266:赖索托:LAISUOTUO,231:赖比瑞亚:LAIBIRUIYA,218:利比亚:LIBIYA,377:摩纳哥:MONAGE,31:荷兰:HELAN,48:波兰:BOLAN,351:葡萄牙:PUTAOYA,1:波多黎各:BODUOLIGE,974:卡达:KADA,40:罗马尼亚:LUOMANIYA,34:西班牙:XIBANYA,94:斯里兰卡:SILILANKA,249:苏丹:SUDAN,268:史瓦济兰:SHIWAJILAN,46:瑞典:RUIDIAN,41:瑞士:RUISHI,359:保加利亚:BAOJIALIYA,353:爱尔兰:AIERLAN,972:以色列:YISELIE,?39:义大利:YIDALI,225:象牙海岸:XIANGYAHAIAN,?1:牙买加:YAMAIJIA,44:英国:YINGGUO,380:乌克兰:WUKELAN,598:乌拉圭:WULAGUI,39:梵谛冈:FANDIGANG,58:委内瑞拉:WEINEIRUILA,381:南斯拉夫:NANSILAFU,671:关岛:GUANDAO,61:澳大利亚:AODALIYA,352:卢森堡:LUSENBAO,960:马尔地夫:MAERDIFU,356:马尔他:MAERTA,687:新喀里多尼亚:XINKALIDUONIYA,64:纽西兰:NIUXILAN,680:帛琉:BOLIU,670:塞班岛:SAIBANDAO,677:所罗门群岛:SUOLUOMENQUNDAO,679:斐济:FEIJI,886:台湾:TAIWAN,852:香港:XIANGGANG,673:汶莱:WENLAI,855:柬埔寨:JIANPUZHAI,237:喀麦隆:KAMAILONG,91:印度:YINDU,62:印尼:YINNI,81:日本:RIBEN,65:新加坡:XINJIAPO,850:北韩:BEIHAN,82:南韩:NANHAN,856:寮国:LIAOGUO,853:澳门:AOMEN,261:马达加斯加:MADAJIASIJIA,265:马拉威:MALAWEI,60:马来西亚:MALAIXIYA,976:外蒙古:WAIMENGGU,95:缅甸:MIANDIAN,977:尼泊尔:NIBOER,968:阿曼:AMAN,92:巴基斯坦:BAJISITAN,63:菲律宾:FEILVBIN,421:斯洛伐克:SILUOFAKE,221:赛内加尔:SAINEIJIAER,963:叙利亚:XULIYA,255:坦尚尼亚:TANSHANGNIYA,66:泰国:TAIGUO,1:千里达及托巴哥:QIANLIDAJITUOBAGE,216:突尼西亚:TUNIXIYA,90:土耳其:TUERQI,84:越南:YUENAN,967:叶门共和国:YEMENGONGHEGUO,</string>
+    <string name="country_normal_code">+86</string>
+    <string name="country_normal_name">中国</string>
+    
+    <string name="scroll_bar_search">搜</string>
+</resources>

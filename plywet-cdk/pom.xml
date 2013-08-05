@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.plywet</groupId>
+	<artifactId>cdk</artifactId>
+	<packaging>pom</packaging>
+	<name>生成组件的工具包</name>
+	<version>1.0</version>
+	<description>用来生成项目中使用的页面组件</description>
+	<modules>
+		<module>maven-xjc-plugin</module>
+	</modules>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.apache.maven</groupId>
+				<artifactId>maven-plugin-api</artifactId>
+				<version>2.2.1</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.maven</groupId>
+				<artifactId>maven-project</artifactId>
+				<version>2.2.1</version>
+			</dependency>
+
+			<dependency>
+				<groupId>jaxb</groupId>
+				<artifactId>jaxb-xjc</artifactId>
+				<version>2.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>jaxb</groupId>
+				<artifactId>jaxb-impl</artifactId>
+				<version>2.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>jaxb</groupId>
+				<artifactId>jaxb-api</artifactId>
+				<version>2.0</version>
+			</dependency>
+			<dependency>
+				<groupId>jaxen</groupId>
+				<artifactId>jaxen</artifactId>
+				<version>1.1</version>
+			</dependency>
+
+			<dependency>
+				<groupId>xml-apis</groupId>
+				<artifactId>xml-apis</artifactId>
+				<version>1.3.02</version>
+			</dependency>
+
+			<dependency>
+				<groupId>dom4j</groupId>
+				<artifactId>dom4j</artifactId>
+				<version>1.6.1</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ant</groupId>
+				<artifactId>ant</artifactId>
+				<version>1.6.5</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ant</groupId>
+				<artifactId>ant-launcher</artifactId>
+				<version>1.6.5</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+</project>

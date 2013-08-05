@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tencent.mm.ui.NetWarnView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/nwview"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/net_warn_detail_btn"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:gravity="center_vertical"
+        android:paddingLeft="15.0dip"
+        android:paddingRight="15.0dip" >
+
+        <ImageView
+            android:id="@+id/nw_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4.0dip"
+            android:src="@drawable/net_warn_icon" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0" >
+
+            <TextView
+                android:id="@+id/nw_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/lightgrey" />
+
+            <ProgressBar
+                android:id="@+id/nw_prog"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4.0dip" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/nw_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/net_warn_btn"
+            android:text="@string/net_warn_show_page" />
+    </LinearLayout>
+
+</com.tencent.mm.ui.NetWarnView>

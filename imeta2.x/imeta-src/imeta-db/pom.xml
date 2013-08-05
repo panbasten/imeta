@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.panet.imeta.imeta-src</groupId>
+	<artifactId>imeta-db</artifactId>
+	<name>iMeta平台数据库基础源代码</name>
+	<version>2.0-SNAPSHOT</version>
+	<description>iMeta平台数据库基础源代码</description>
+	<parent>
+		<artifactId>imeta-src</artifactId>
+		<groupId>com.panet.imeta</groupId>
+		<version>2.0-SNAPSHOT</version>
+	</parent>
+	<dependencies>
+		<dependency>
+			<groupId>com.panet.imeta.imeta-src</groupId>
+			<artifactId>imeta-core</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+</project>

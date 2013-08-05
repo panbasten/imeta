@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/new_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0.0dip"
+        android:layout_marginTop="30.0dip"
+        android:background="@drawable/whats_news_tip"
+        android:gravity="center"
+        android:text="@string/whats_news_item_add_tip"
+        android:textColor="#ffffffff"
+        android:textSize="20.0dip"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60.0dip"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/whatsnews_style"
+            android:layout_marginTop="50.0dip"
+            android:gravity="center_vertical"
+            android:text="@string/whats_news_item3"
+            android:textSize="20.0dip" />
+
+        <TextView
+            android:id="@+id/mm_text_tv"
+            style="@style/whatsnews_bottom_style"
+            android:layout_gravity="center"
+            android:layout_marginTop="60.0dip"
+            android:gravity="center"
+            android:text="@string/whats_news_item_tip"
+            android:textSize="20.0dip" />
+    </LinearLayout>
+
+</LinearLayout>

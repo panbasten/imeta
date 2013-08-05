@@ -1,0 +1,50 @@
+{
+	"title" : "对象视图",
+	"link" : "webapp/framework/js/portal/jquery.iobjectview.json",
+	"description" : "用于查看数据库中的对象",
+	"modified" : "2009-01-20 12:34",
+	"generator" : "Peter",
+	"items" : [{
+		"createTag" : "<div></div>",
+		"attr" : {
+			"id" : "iov",
+			"class" : "toolbar",
+			"style" : "left:0px;float:left;position:absolute;"
+		},
+		"items" : [{
+			"createTag" : "<div></div>",
+			"attr" : {
+				"id" : "iov-tl",
+				"class" : "toolbar-fix-title"
+			},
+			"html" : "对象视图",
+			"items" : [{
+				"createTag" : "<div></div>",
+				"attr" : {
+					"id" : "iov-flush",
+					"class" : "toolbar-flush"
+				}
+			},{
+				"createTag" : "<div></div>",
+				"attr" : {
+					"id" : "iov-min",
+					"class" : "toolbar-move-left"
+				}
+			}]
+		},{
+			"createTag" : "<div></div>",
+			"attr" : {
+				"class" : "toolbar-input"
+			},
+			"html" : "视图类型: <select id='iov-sl' onchange='jQuery.imetabar.objectValueSelect(this);'><option value=''>--全部--</option><option value='Transformation'>转换</option><option value='Job'>任务</option></select>"
+		},{
+			"createTag" : "<div></div>",
+			"attr" : {
+				"id" : "iov-by",
+				"class" : "toolbar-content",
+				"style" : "height:400px"
+			},
+			"loadUrl" : "ImetaAction!loadRepositoryObjects.action"
+		}]
+	}]
+}

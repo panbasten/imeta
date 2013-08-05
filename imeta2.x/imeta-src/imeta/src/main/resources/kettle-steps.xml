@@ -1,0 +1,1379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<steps>
+<!-- I commented this out because this is being loaded using the Step annotation.  Just to test it.
+	<step id="RowGenerator">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.GenerateRows")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.rowgenerator.RowGeneratorMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@INPUT.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.GenerateRows")
+		</tooltip>
+		<image-uri>GEN.png</image-uri>
+	</step>
+	-->
+	
+	<step id="Dummy">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.Dummy")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.dummytrans.DummyTransMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@FLOW.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.Dummy")
+		</tooltip>
+		<image-uri>DUM.png</image-uri>
+	</step>
+	
+	<step id="Append">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.Append")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.append.AppendMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@FLOW.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.Append")
+		</tooltip>
+		<image-uri>APP.png</image-uri>
+	</step>	
+	
+	<step id="TableInput">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.TableInput")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.tableinput.TableInputMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@INPUT.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.TableInput")
+		</tooltip>
+		<image-uri>TIP.png</image-uri>
+	</step>
+	
+	<step id="SocketReader">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.SocketReader")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.socketreader.SocketReaderMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@INLINE.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.SocketReader")
+		</tooltip>
+		<image-uri>SKR.png</image-uri>
+	</step>
+	
+	<step id="SocketWriter">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.SocketWriter")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.socketwriter.SocketWriterMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@INLINE.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.SocketWriter")
+		</tooltip>
+		<image-uri>SKW.png</image-uri>
+	</step>
+	
+	<step id="SelectValues">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.SelectValues")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.selectvalues.SelectValuesMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@TRANSFORM.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.SelectValues")
+		</tooltip>
+		<image-uri>SEL.png</image-uri>
+	</step>
+	
+	<step id="TextFileInput">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.TextFileInput")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.textfileinput.TextFileInputMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@INPUT.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.TextFileInput")
+		</tooltip>
+		<image-uri>TFI.png</image-uri>
+	</step>
+	
+	<step id="Calculator">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.Calculator")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.calculator.CalculatorMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@TRANSFORM.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.Calculator")
+		</tooltip>Database join
+		<image-uri>CLC.png</image-uri>
+	</step>
+	
+	<step id="Constant">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.AddConstants")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.constant.ConstantMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@TRANSFORM.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.AddConstants")
+		</tooltip>
+		<image-uri>CST.png</image-uri>
+	</step>
+	
+	<step id="Abort">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.Abort")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.abort.AbortMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@FLOW.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.Abort")
+		</tooltip>
+		<image-uri>ABR.png</image-uri>
+	</step>
+	
+	<step id="Sequence">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.AddSequence")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.addsequence.AddSequenceMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@TRANSFORM.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.Addsequence")
+		</tooltip>
+		<image-uri>SEQ.png</image-uri>
+	</step>
+	
+	<step id="TableOutput">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.TableOutput")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.tableoutput.TableOutputMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@OUTPUT.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.TableOutput")
+		</tooltip>
+		<image-uri>TOP.png</image-uri>
+	</step>
+	
+	<step id="SortRows">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.SortRows")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.sort.SortRowsMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@TRANSFORM.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.SortRows")
+		</tooltip>
+		<image-uri>SRT.png</image-uri>
+	</step>
+	
+	<step id="OraBulkLoader">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.OraBulkLoader")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.orabulkloader.OraBulkLoaderMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@BULK.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.OraBulkLoader")
+		</tooltip>
+		<image-uri>OBL.png</image-uri>
+	</step>
+	
+	<step id="Injector">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.Injector")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.injector.InjectorMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@INLINE.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.Injector")
+		</tooltip>
+		<image-uri>INJ.png</image-uri>
+	</step>
+	
+	<step id="FilterRows">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.FilterRows")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.filterrows.FilterRowsMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@FLOW.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.FilterRows")
+		</tooltip>
+		<image-uri>FLT.png</image-uri>
+	</step>
+	
+	<step id="TextFileOutput">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.TextFileOutput")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.textfileoutput.TextFileOutputMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@OUTPUT.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.TextFileOutput")
+		</tooltip>
+		<image-uri>TFO.png</image-uri>
+	</step>
+	
+	<step id="SystemInfo">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.GetSystemInfo")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.systemdata.SystemDataMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@UTILITY.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.GetSystemInfo")
+		</tooltip>
+		<image-uri>SYS.png</image-uri>
+	</step>
+	
+	<step id="StreamLookup">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.StreamLookup")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.streamlookup.StreamLookupMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@LOOKUP.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.StreamLookup")
+		</tooltip>
+		<image-uri>SLU.png</image-uri>
+	</step>
+	
+	<step id="Unique">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.UniqueRows")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.uniquerows.UniqueRowsMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@TRANSFORM.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.UniqueRows")
+		</tooltip>
+		<image-uri>UNQ.png</image-uri>
+	</step>
+	
+	<step id="DBLookup">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.DatabaseLookup")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.databaselookup.DatabaseLookupMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@LOOKUP.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.DatabaseLookup")
+		</tooltip>
+		<image-uri>DLU.png</image-uri>
+	</step>
+	
+	<step id="DBJoin">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.DatabaseJoin")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.databasejoin.DatabaseJoinMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@LOOKUP.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.DatabaseJoin")
+		</tooltip>
+		<image-uri>DBJ.png</image-uri>
+	</step>
+	
+	<step id="DimensionLookup">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.DimensionUpdate")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.dimensionlookup.DimensionLookupMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@DATA_WAREHOUSE.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.DimensionUpdate")
+		</tooltip>
+		<image-uri>DIM.png</image-uri>
+	</step>
+	
+	<step id="ExcelInput">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.ExcelInput")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.excelinput.ExcelInputMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@INPUT.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.ExcelInput")
+		</tooltip>
+		<image-uri>XLI.png</image-uri>
+	</step>
+
+	<step id="CombinationLookup">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.CombinationUpdate")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.combinationlookup.CombinationLookupMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@DATA_WAREHOUSE.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.CombinationUpdate")
+		</tooltip>
+		<image-uri>CMB.png</image-uri>
+	</step>
+	
+	<step id="ScriptValueMod,ScriptValue">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.JavaScriptMod")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.scriptvalues_mod.ScriptValuesMetaMod</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@SCRIPTING.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.JavaScriptMod")
+		</tooltip>
+		<image-uri>SCR_mod.png</image-uri>
+	</step>
+	
+	<step id="JoinRows">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.JoinRows")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.joinrows.JoinRowsMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@JOINS.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.JoinRows")
+		</tooltip>
+		<image-uri>JRW.png</image-uri>
+	</step>
+	
+	<step id="Update">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.Update")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.update.UpdateMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@OUTPUT.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.Update")
+		</tooltip>
+		<image-uri>UPD.png</image-uri>
+	</step>
+	
+	<step id="InsertUpdate">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.InsertOrUpdate")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.insertupdate.InsertUpdateMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@OUTPUT.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.InsertOrUpdate")
+		</tooltip>
+		<image-uri>INU.png</image-uri>
+	</step>
+	
+	<step id="Delete">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.Delete")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.delete.DeleteMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@OUTPUT.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.Delete")
+		</tooltip>
+		<image-uri>DEL.png</image-uri>
+	</step>
+	
+	<step id="MappingInput">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.MappingInput")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.mappinginput.MappingInputMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@MAPPING.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.MappingInput")
+		</tooltip>
+		<image-uri>MPI.png</image-uri>
+	</step>
+	
+	<step id="Mapping">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.MappingSubTransformation")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.mapping.MappingMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@MAPPING.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.MappingSubTransformation")
+		</tooltip>
+		<image-uri>MAP.png</image-uri>
+	</step>
+	
+	<step id="MappingOutput">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.MappingOutput")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.mappingoutput.MappingOutputMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@MAPPING.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.MappingOutput")
+		</tooltip>
+		<image-uri>MPO.png</image-uri>
+	</step>
+	
+	<step id="SetVariable">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.SetVariable")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.setvariable.SetVariableMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@JOB.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.SetVariable")
+		</tooltip>
+		<image-uri>SVA.png</image-uri>
+	</step>
+	
+	<step id="GetVariable">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.GetVariable")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.getvariable.GetVariableMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@JOB.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.GetVariable")
+		</tooltip>
+		<image-uri>GVA.png</image-uri>
+	</step>
+	
+	<step id="NullIf">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.NullIf")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.nullif.NullIfMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@UTILITY.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.Nullif")
+		</tooltip>
+		<image-uri>NUI.png</image-uri>
+	</step>
+	
+	<step id="ExecSQL">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.ExecuteSQL")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.sql.ExecSQLMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@SCRIPTING.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.ExecuteSQL")
+		</tooltip>
+		<image-uri>SQL.png</image-uri>
+	</step>
+	
+	<step id="RowsFromResult">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.GetRows")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.rowsfromresult.RowsFromResultMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@JOB.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.GetRows")
+		</tooltip>
+		<image-uri>FCH.png</image-uri>
+	</step>
+	
+	<step id="RowsToResult">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.CopyRows")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.rowstoresult.RowsToResultMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@JOB.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.CopyRows")
+		</tooltip>
+		<image-uri>TCH.png</image-uri>
+	</step>
+	
+	<step id="BlockingStep">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.BlockingStep")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.blockingstep.BlockingStepMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@FLOW.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.BlockingStep")
+		</tooltip>
+		<image-uri>BLK.png</image-uri>
+	</step>
+	
+	<step id="HTTP">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.HTTP")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.http.HTTPMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@LOOKUP.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.HTTP")
+		</tooltip>
+		<image-uri>WEB.png</image-uri>
+	</step>
+	
+	<step id="MergeRows">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.MergeRows")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.mergerows.MergeRowsMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@JOINS.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.MergeRows")
+		</tooltip>
+		<image-uri>MRG.png</image-uri>
+	</step>
+	
+	<step id="GetFileNames">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.GetFileNames")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.getfilenames.GetFileNamesMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@INPUT.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.GetFileNames")
+		</tooltip>
+		<image-uri>GFN.png</image-uri>
+	</step>
+	
+	<step id="FilesFromResult">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.FilesFromResult")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.filesfromresult.FilesFromResultMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@JOB.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.FilesFromResult")
+		</tooltip>
+		<image-uri>FFR.png</image-uri>
+	</step>
+	
+	<step id="FilesToResult">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.FilesToResult")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.filestoresult.FilesToResultMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@JOB.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.FilesToResult")
+		</tooltip>
+		<image-uri>FTR.png</image-uri>
+	</step>
+	
+	<step id="GroupBy">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.GroupBy")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.groupby.GroupByMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@STATISTICS.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.Groupby")
+		</tooltip>
+		<image-uri>GRP.png</image-uri>
+	</step>
+	
+	<step id="AnalyticQuery">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.AnalyticQuery")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.analyticquery.AnalyticQueryMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@STATISTICS.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.AnalyticQuery")
+		</tooltip>
+		<image-uri>AQI.png</image-uri>
+	</step>
+	
+	<step id="MergeJoin">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.MergeJoin")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.mergejoin.MergeJoinMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@JOINS.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.MergeJoin")
+		</tooltip>
+		<image-uri>MJOIN.png</image-uri>
+	</step>
+	
+	<step id="SortedMerge">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.SortedMerge")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.sortedmerge.SortedMergeMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@JOINS.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.SortedMerge")
+		</tooltip>
+		<image-uri>SMG.png</image-uri>
+	</step>
+	
+	<step id="XMLInput">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.XMLInput")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.xmlinput.XMLInputMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@DEPRECATED.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.XMLInput")
+		</tooltip>
+		<image-uri>XIN.png</image-uri>
+	</step>
+	
+	<step id="XMLInputSax">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.XMLInputSax")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.xmlinputsax.XMLInputSaxMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@INPUT.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.XMLInputSax")
+		</tooltip>
+		<image-uri>XIS.png</image-uri>
+	</step>
+	
+	<step id="XMLOutput">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.XMLOutput")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.xmloutput.XMLOutputMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@OUTPUT.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.XMLOutput")
+		</tooltip>
+		<image-uri>XOU.png</image-uri>
+	</step>
+	
+	<step id="ExcelOutput">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.ExcelOutput")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.exceloutput.ExcelOutputMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@OUTPUT.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.ExcelOutput")
+		</tooltip>
+		<image-uri>XLO.png</image-uri>
+	</step>
+	
+	<step id="DBProc">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.CallDBProcedure")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.dbproc.DBProcMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@LOOKUP.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.CallDBProcedure")
+		</tooltip>
+		<image-uri>PRC.png</image-uri>
+	</step>  
+	
+    <step id="Denormaliser">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.RowDenormaliser")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.denormaliser.DenormaliserMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@TRANSFORM.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.RowDenormaliser")
+		</tooltip>
+		<image-uri>UNP.png</image-uri>
+	</step>
+	   
+	<step id="Normaliser">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.RowNormaliser")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.normaliser.NormaliserMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@TRANSFORM.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.RowNormaliser")
+		</tooltip>
+		<image-uri>NRM.png</image-uri>
+	</step> 
+	
+	<step id="Flattener,Flatterner">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.RowFlattener")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.flattener.FlattenerMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@TRANSFORM.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.RowFlattener")
+		</tooltip>
+		<image-uri>FLA.png</image-uri>
+	</step> 
+	
+	<step id="XBaseInput">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.XBaseInput")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.xbaseinput.XBaseInputMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@INPUT.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.XBaseInput")
+		</tooltip>
+		<image-uri>XBI.png</image-uri>
+	</step> 
+
+	<step id="AccessOutput">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.AccessOutput")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.accessoutput.AccessOutputMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@OUTPUT.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.AccessOutput")
+		</tooltip>
+		<image-uri>ACO.png</image-uri>
+	</step> 
+	
+	<step id="RegexEval">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.RegexEval")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.regexeval.RegexEvalMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@SCRIPTING.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.RegexEval")
+		</tooltip>
+		<image-uri>RGE.png</image-uri>
+	</step>
+
+	<step id="AccessInput">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.AccessInput")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.accessinput.AccessInputMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@INPUT.getName()</category>
+		<tooltip>ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.AccessInput")
+		</tooltip>
+		<image-uri>ACI.png</image-uri>
+	</step>
+	
+	<step id="AddXML">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.AddXML")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.addxml.AddXMLMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@TRANSFORM.getName()</category>
+		<tooltip>ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.AddXML")
+		</tooltip>
+		<image-uri>XIN.png</image-uri>
+	</step>
+	
+	<step id="AggregateRows">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.AggregateRows")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.aggregaterows.AggregateRowsMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@DEPRECATED.getName()</category>
+		<tooltip>ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.AggregateRows")
+		</tooltip>
+		<image-uri>AGG.png</image-uri>
+	</step>
+	
+	<step id="MondrianInput">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.MondrianInput")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.mondrianinput.MondrianInputMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@INPUT.getName()</category>
+		<tooltip>ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.MondrianInput")
+		</tooltip>
+		<image-uri>MON.png</image-uri>
+	</step>
+	
+	<step id="GetFilesRowsCount">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.GetFilesRowsCount")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.getfilesrowscount.GetFilesRowsCountMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@INPUT.getName()</category>
+		<tooltip>ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.GetFilesRowsCount")
+		</tooltip>
+		<image-uri>FRC.png</image-uri>
+	</step>
+	
+	<step id="LDAPInput">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.LDAPInput")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.ldapinput.LDAPInputMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@INPUT.getName()</category>
+		<tooltip>ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.LDAPInput")
+		</tooltip>
+		<image-uri>LIP.png</image-uri>
+	</step>
+	
+	<step id="getXMLData">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.GetXMLData")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.getxmldata.GetXMLDataMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@INPUT.getName()</category>
+		<tooltip>ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.GetXMLData")
+		</tooltip>
+		<image-uri>GXD.png</image-uri>
+	</step>
+	
+	<step id="XSDValidator">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.XSDValidator")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.xsdvalidator.XsdValidatorMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@VALIDATION.getName()</category>
+		<tooltip>ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.XSDValidator")
+		</tooltip>
+		<image-uri>XSD.png</image-uri>
+	</step>
+	
+	<step id="XSLT">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.XSLT")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.xslt.XsltMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@TRANSFORM.getName()</category>
+		<tooltip>ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.XSLT")
+		</tooltip>
+		<image-uri>XSLT.png</image-uri>
+	</step>
+	
+	<step id="Validator">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.Validator")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.validator.ValidatorMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@VALIDATION.getName()</category>
+		<tooltip>ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.Validator")
+		</tooltip>
+		<image-uri>VLD.png</image-uri>
+	</step>
+	
+	<step id="SQLFileOutput">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.SQLFileOutput")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.sqlfileoutput.SQLFileOutputMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@OUTPUT.getName()</category>
+		<tooltip>ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.SQLFileOutput")
+		</tooltip>
+		<image-uri>SFO.png</image-uri>
+	</step>
+	
+	<step id="SplitFieldToRows3">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.SplitFieldToRows3")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.splitfieldtorows.SplitFieldToRowsMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@TRANSFORM.getName()</category>
+		<tooltip>ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.SplitFieldToRows3")
+		</tooltip>
+		<image-uri>SFtR.png</image-uri>
+	</step>	
+	
+	<step id="PropertyInput">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.PropertyInput")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.propertyinput.PropertyInputMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@INPUT.getName()</category>
+		<tooltip>ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.PropertyInput")
+		</tooltip>
+		<image-uri>PFI.png</image-uri>
+	</step>
+	
+	<step id="GPBulkLoader">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.GPBulkLoader")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.gpbulkloader.GPBulkLoaderMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@EXPERIMENTAL.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.GPBulkLoader")
+		</tooltip>
+		<image-uri>GBL.png</image-uri>
+	</step>
+	
+	<step id="PGBulkLoader">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.PGBulkLoader")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.pgbulkloader.PGBulkLoaderMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@EXPERIMENTAL.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.PGBulkLoader")
+		</tooltip>
+		<image-uri>PGBL.png</image-uri>
+	</step>
+	
+	<step id="LDIFInput">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.LDIFInput")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.ldifinput.LDIFInputMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@INPUT.getName()</category>
+		<tooltip>ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.LDIFInput")
+		</tooltip>
+		<image-uri>LDI.png</image-uri>
+	</step>
+	
+	<step id="PropertyOutput">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.PropertyOutput")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.propertyoutput.PropertyOutputMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@OUTPUT.getName()</category>
+		<tooltip>ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.PropertyOutput")
+		</tooltip>
+		<image-uri>PFO.png</image-uri>
+	</step>
+	
+	<step id="SwitchCase">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.SwitchCase")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.switchcase.SwitchCaseMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@FLOW.getName()</category>
+		<tooltip>ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.SwitchCase")
+		</tooltip>
+		<image-uri>SWC.png</image-uri>
+	</step>
+	
+	<step id="XMLJoin">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.XMLJoin")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.xmljoin.XMLJoinMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@JOINS.getName()</category>
+		<tooltip>ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.XMLJoin")
+		</tooltip>
+		<image-uri>XJN.png</image-uri>
+	</step>
+
+	<step id="StepMetastructure">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.StepMetastructure")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.stepmeta.StepMetastructureMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@UTILITY.getName()</category>
+		<tooltip>ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.StepMetastructure")
+		</tooltip>
+		<image-uri>STMD.png</image-uri>
+	</step>
+	
+	<step id="TableExists">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.TableExists")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.tableexists.TableExistsMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@LOOKUP.getName()</category>
+		<tooltip>ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.TableExists")
+		</tooltip>
+		<image-uri>TEX.png</image-uri>
+	</step>
+		
+	<step id="ColumnExists">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.ColumnExists")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.columnexists.ColumnExistsMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@LOOKUP.getName()</category>
+		<tooltip>ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.ColumnExists")
+		</tooltip>
+		<image-uri>CEX.png</image-uri>
+	</step>
+	
+	<step id="FileExists">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.FileExists")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.fileexists.FileExistsMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@LOOKUP.getName()</category>
+		<tooltip>ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.FileExists")
+		</tooltip>
+		<image-uri>FEX.png</image-uri>
+	</step>
+	
+	<step id="CloneRow">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.CloneRow")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.clonerow.CloneRowMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@UTILITY.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.CloneRow")
+		</tooltip>
+		<image-uri>CLR.png</image-uri>
+	</step>
+	
+	<step id="Delay">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.Delay")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.delay.DelayMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@UTILITY.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.Delay")
+		</tooltip>
+		<image-uri>DLT.png</image-uri>
+	</step>
+	
+	<step id="CheckSum">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.CheckSum")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.checksum.CheckSumMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@TRANSFORM.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.CheckSum")
+		</tooltip>
+		<image-uri>CSM.png</image-uri>
+	</step>
+	
+	<step id="RandomValue">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.RandomValue")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.randomvalue.RandomValueMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@INPUT.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.RandomValue")
+		</tooltip>
+		<image-uri>RVA.png</image-uri>
+	</step>
+	
+	<step id="GetSubFolders">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.GetSubFolders")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.getsubfolders.GetSubFoldersMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@EXPERIMENTAL.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.GetSubFolders")
+		</tooltip>
+		<image-uri>LSF.png</image-uri>
+	</step>
+	
+	<step id="MonetDBBulkLoader">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.MonetDBBulkLoader")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.monetdbbulkloader.MonetDBBulkLoaderMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@EXPERIMENTAL.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.MonetDBBulkLoader")
+		</tooltip>
+		<image-uri>OBL.png</image-uri>
+	</step>
+	
+	<step id="MailValidator">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.MailValidator")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.mailvalidator.MailValidatorMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@VALIDATION.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.MailValidator")
+		</tooltip>
+		<image-uri>MAV.png</image-uri>
+	</step>
+	
+	<step id="Mail">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.Mail")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.mail.MailMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@UTILITY.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.Mail")
+		</tooltip>
+		<image-uri>MAIL.png</image-uri>
+	</step>
+	
+	<step id="CreditCardValidator">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.CreditCardValidator")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.creditcardvalidator.CreditCardValidatorMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@VALIDATION.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.CreditCardValidator")
+		</tooltip>
+		<image-uri>CCV.png</image-uri>
+	</step>
+	
+	<step id="ProcessFiles">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.ProcessFiles")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.processfiles.ProcessFilesMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@UTILITY.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.ProcessFiles")
+		</tooltip>
+		<image-uri>PPF.png</image-uri>
+	</step>
+	
+	<step id="DetectLastRow">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.DetectLastRow")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.detectlastrow.DetectLastRowMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@FLOW.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.DetectLastRow")
+		</tooltip>
+		<image-uri>DLR.png</image-uri>
+	</step>
+	
+	<step id="DetectEmptyStream">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.DetectEmptyStream")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.detectemptystream.DetectEmptyStreamMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@FLOW.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.DetectEmptyStream")
+		</tooltip>
+		<image-uri>EMS.png</image-uri>
+	</step>
+	
+	<step id="WriteToLog">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.WriteToLog")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.writetolog.WriteToLogMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@UTILITY.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.WriteToLog")
+		</tooltip>
+		<image-uri>WTL.png</image-uri>
+	</step>
+	
+	<step id="SampleRows">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.SampleRows")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.samplerows.SampleRowsMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@EXPERIMENTAL.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.SampleRows")
+		</tooltip>
+		<image-uri>SR.png</image-uri>
+	</step>
+	
+	<step id="GetPreviousRowField">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.GetPreviousRowField")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.getpreviousrowfield.GetPreviousRowFieldMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@DEPRECATED.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.GetPreviousRowField")
+		</tooltip>
+		<image-uri>PRV.png</image-uri>
+	</step>
+	
+	<step id="ExecSQLRow">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.ExecSQLRow")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.execsqlrow.ExecSQLRowMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@EXPERIMENTAL.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.ExecSQLRow")
+		</tooltip>
+		<image-uri>SQLR.png</image-uri>
+	</step>
+	
+	<step id="DynamicSQLRow">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.DynamicSQLRow")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.dynamicsqlrow.DynamicSQLRowMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@EXPERIMENTAL.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.DynamicSQLRow")
+		</tooltip>
+		<image-uri>DSR.png</image-uri>
+	</step>
+	
+	<step id="NumberRange">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.NumberRange")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.numberrange.NumberRangeMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@TRANSFORM.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.NumberRange")
+		</tooltip>
+		<image-uri>NRI.png</image-uri>
+	</step>
+	
+	<step id="SynchronizeAfterMerge">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.SynchronizeAfterMerge")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.synchronizeaftermerge.SynchronizeAfterMergeMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@EXPERIMENTAL.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.SynchronizeAfterMerge")
+		</tooltip>
+		<image-uri>SAM.png</image-uri>
+	</step>
+	
+	<step id="LucidDBBulkLoader">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.LucidDBBulkLoader")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.luciddbbulkloader.LucidDBBulkLoaderMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@BULK.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.LucidDBBulkLoader")
+		</tooltip>
+		<image-uri>OBL.png</image-uri>
+	</step>
+	
+	<step id="ReplaceString">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.ReplaceString")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.replacestring.ReplaceStringMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@TRANSFORM.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.ReplaceString")
+		</tooltip>
+		<image-uri>RST.png</image-uri>
+	</step>
+	
+	<step id="StringCut">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.StringCut")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.stringcut.StringCutMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@TRANSFORM.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.StringCut")
+		</tooltip>
+		<image-uri>SRC.png</image-uri>
+	</step>
+	
+	<step id="IfNull">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.IfNull")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.ifnull.IfNullMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@UTILITY.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.IfNull")
+		</tooltip>
+		<image-uri>IFN.png</image-uri>
+	</step>
+	
+	<!-- 
+	<step id="RssOutput">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.RssOutput")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.rssoutput.RssOutputMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@OUTPUT.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.RssOutput")
+		</tooltip>
+		<image-uri>RRO.png</image-uri>
+	</step>
+	
+	<step id="RssInput">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.RssInput")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.rssinput.RssInputMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@INPUT.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.RssInput")
+		</tooltip>
+		<image-uri>RIN.png</image-uri>
+	</step>
+	 -->
+	 
+	<!-- 
+	<step id="SalesforceInput">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.SalesforceInput")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.salesforceinput.SalesforceInputMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@INPUT.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.SalesforceInput")
+		</tooltip>
+		<image-uri>SFI.png</image-uri>
+	</step>
+	 -->
+	
+	<step id="Formula">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.Formula")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.formula.FormulaMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@SCRIPTING.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.Formula")
+		</tooltip>
+		<image-uri>FRM.png</image-uri>
+	</step>
+
+	<step id="Janino">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.Janino")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.janino.JaninoMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@SCRIPTING.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.Janino")
+		</tooltip>
+		<image-uri>GenericTransform.png</image-uri>
+	</step>
+	
+	<step id="ReservoirSampling">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.ReservoirSampling")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.reservoirsampling.ReservoirSamplingMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@STATISTICS.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.ReservoirSampling")
+		</tooltip>
+		<image-uri>RS.png</image-uri>
+	</step>
+	
+	<step id="UnivariateStats">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.UnivariateStats")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.univariatestats.UnivariateStatsMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@STATISTICS.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.UnivariateStats")
+		</tooltip>
+		<image-uri>US.png</image-uri>
+	</step>
+	
+	<step id="UniqueRowsByHashSet,UniqueRowsByHashSetMeta">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.UniqueRowsByHashSet")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.uniquerowsbyhashset.UniqueRowsByHashSetMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@EXPERIMENTAL.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.UniqueRowsByHashSet")
+		</tooltip>
+		<image-uri>URH.png</image-uri>
+	</step>
+	
+	<step id="HTTPPOST">
+		<description>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeLongDesc.HTTPPOST")
+		</description>
+		<class-name>com.panet.imeta.trans.steps.httppost.HTTPPOSTMeta</class-name>
+		<category>ognl:@com.panet.imeta.trans.step.StepCategory@EXPERIMENTAL.getName()</category>
+		<tooltip>
+			ognl:@com.panet.imeta.trans.step.Messages@getString("BaseStep.TypeTooltipDesc.HTTPPOST")
+		</tooltip>
+		<image-uri>HTP.png</image-uri>
+	</step>
+</steps>

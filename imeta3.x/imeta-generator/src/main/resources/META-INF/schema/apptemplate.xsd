@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by sayjsp.com (wonsan) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="AppList">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="App" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="DialogAttr" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="key" type="xs:string" use="required"/>
+									<xs:attribute name="value" type="xs:string"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attributeGroup ref="common.attribute"/>
+						<xs:attributeGroup ref="value.attribute"/>
+						<xs:attributeGroup ref="type.attribute"/>
+						<xs:attributeGroup ref="title.attribute"/>
+						<xs:attribute name="img" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>图片路径</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="removable" type="xs:boolean">
+							<xs:annotation>
+								<xs:documentation>是否可以移除</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="description"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="common.attribute">
+		<xs:annotation>
+			<xs:documentation>通用属性，除根节点外均需要拥有的属性</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="id" type="xs:ID" use="required"/>
+		<xs:attribute name="description" type="xs:string" use="optional"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="value.attribute">
+		<xs:annotation>
+			<xs:documentation>命令属性</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="value" type="xs:string"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="type.attribute">
+		<xs:annotation>
+			<xs:documentation>类型属性</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="type" type="xs:string"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="title.attribute">
+		<xs:annotation>
+			<xs:documentation>标题属性</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="title" type="xs:string"/>
+		<xs:attribute name="titleAlt" type="xs:string"/>
+	</xs:attributeGroup>
+</xs:schema>

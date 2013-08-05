@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/nav_page_tile"
+    android:orientation="vertical"
+    android:padding="20.0dip" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="2.0"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/copyright" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/LargestTextSize" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="20.0dip"
+        android:layout_weight="1.0"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/select_login_btn"
+            style="@style/MMLineActionButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/intro_existed_login"
+            android:textSize="@dimen/TitleTextSize" />
+
+        <View style="@style/MMSplit" />
+
+        <TextView
+            style="@style/loginHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_login_hint" />
+
+        <Button
+            android:id="@+id/select_register_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30.0dip"
+            android:background="@drawable/btn_style_two"
+            android:text="@string/intro_create_account_qq"
+            android:textColor="@color/black"
+            android:textSize="@dimen/TitleTextSize" />
+
+        <View style="@style/MMSplit" />
+
+        <TextView
+            style="@style/loginHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_register_hint" />
+    </LinearLayout>
+
+</LinearLayout>

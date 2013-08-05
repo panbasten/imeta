@@ -1,0 +1,14 @@
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+	<h:outputText id="#{compId}_output" value="#{compBean.value.value}"/>
+	<h:inputHidden id="#{compId}" value="#{compBean.value.value}" />  
+    <p:slider for="#{compId}" display="#{compId}_output" 
+       	minValue="#{compBean.value.min}" maxValue="#{compBean.value.max}" 
+       	step="#{compBean.value.step}" style="width:80%" />
+
+
+</ui:composition>

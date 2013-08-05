@@ -1,0 +1,50 @@
+<f:view xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+	
+    
+	<p:dialog id="login" widgetVar="login_d" width="350" height="170" resizable="false" showEffect="fade" hideEffect="fade"
+	    	modal="true" styleClass="login_dialog">
+	        
+   		<ui:decorate template="/templates/input/editable-template.xhtml">
+		    <ui:param name="compColumnNum" value="1" />
+		    <ui:param name="compLabelStyle" value="width:30%;"/>
+		    <ui:param name="compContentStyle" value="width:70%;"/>
+		    
+			<!-- 第一行 -->
+			<ui:decorate template="/templates/input/editable-1c-custom-template.xhtml">
+				<ui:param name="compBeanId" value="loginAccount" />
+				<ui:param name="compBeanLable" value="账&#12288;号:" />
+				<ui:param name="compBeanRequired" value="false" />
+				
+				<ui:define name="compBeanContent">
+					<h:inputText id="loginAccount" styleClass="input01" 
+						onblur="if (value ==''){value='Email帐号或者手机号码';}" 
+						onfocus="if (value =='Email帐号或者手机号码'){value =''}" 
+						value="Email帐号或者手机号码" />
+				</ui:define>
+			</ui:decorate>
+			
+			<!-- 第二行 -->
+			<ui:decorate template="/templates/input/editable-1c-custom-template.xhtml">
+				<ui:param name="compBeanId" value="loginPassword" />
+				<ui:param name="compBeanLable" value="密&#12288;码:" />
+				<ui:param name="compBeanRequired" value="false" />
+				
+				<ui:define name="compBeanContent">
+					<h:inputText id="loginPassword" styleClass="input01" value="" />
+				</ui:define>
+			</ui:decorate>
+		</ui:decorate>
+		
+		<div class="login-reg ">
+			<p:button id="regBtn" value="注册账号" />
+			<p:button id="loginBtn" value="登&#12288;录" />
+		</div>
+        
+    </p:dialog>
+
+</f:view>   

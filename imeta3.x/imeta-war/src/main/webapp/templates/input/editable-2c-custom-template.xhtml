@@ -1,0 +1,165 @@
+<!-- 
+该模板是用来显示编辑页面的一行
+
+参数：
+compType : 		该编辑页面类型
+	normal : 		正常类型（输出第一个label、第一个编辑区、第二个label、第二个编辑区）
+	single :		单个类型（输出第一个label、第一个编辑区-合并三个单元格）
+	single-all :	单个全部类型（输出两行第一行4列，显示一个label和3个空区域；第二行合格4个单元格显示内容）
+compBean1Id : 		第一个组件的ID
+compBean2Id : 		第二个组件的ID
+compBean1Lable : 	第一个组件的Label
+compBean2Lable : 	第二个组件的Label
+compBean1Editable : 第一个组件是否可以编辑
+compBean2Editable : 第二个组件是否可以编辑
+compBean1Required : 第一个组件是否必填
+compBean2Required : 第二个组件是否必填
+
+代码区：
+compBean1Content : 	第一个组件的内容代码
+compBean2Content : 	第二个组件的内容代码
+
+-->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<tr>
+	<c:choose>
+		<c:when test="#{compType eq 'single'}">
+			<td class="portal-editable-2c-label">
+				<c:if test="#{!empty compBean1Id}">
+					<h:panelGroup id="#{compBean1Id}_label" styleClass="portal-editable-label-all">
+					<c:if test="#{empty compBean1Editable or compBean1Editable == true}">
+						<h:outputLabel for="#{compBean1Id}" title="#{compBean1Lable}"> 
+							<h:outputText value="#{compBean1Lable}"/>
+						</h:outputLabel>
+					</c:if>
+					<c:if test="#{compBean1Editable == false}">
+						<h:outputLabel title="#{compBean1Lable}"> 
+							<h:outputText value="#{compBean1Lable}"/>
+						</h:outputLabel>
+					</c:if>
+					</h:panelGroup>
+				</c:if>
+			</td>
+			<td colspan="3">
+				<c:if test="#{!empty compBean1Id}">
+					<c:if test="#{empty compBean1Editable or compBean1Editable == true}">
+						<ui:decorate template="/layout/input/elements/elementWrapper.xhtml">
+							<ui:param name="compId" value="#{compBean1Id}" />
+							<ui:param name="compRequired" value="#{compBean1Required}" />
+							<ui:insert name="compBean1Content" />
+						</ui:decorate>
+					</c:if>
+					<c:if test="#{compBean1Editable == false}">
+						<ui:insert name="compBean1Content" />
+					</c:if>
+				</c:if>
+			</td>
+		</c:when>
+		<c:when test="#{compType eq 'single-all'}">
+			<h:panelGroup id="#{compBean1Id}_label" styleClass="portal-editable-label-all">
+			<c:if test="#{!empty compBean1Id and !empty compBean1Lable}">
+			<td class="portal-editable-2c-label-all" colspan="4">
+				<c:if test="#{empty compBean1Editable or compBean1Editable == true}">
+					<h:outputLabel for="#{compBean1Id}" title="#{compBean1Lable}"> 
+						<h:outputText value="#{compBean1Lable}"/>
+					</h:outputLabel>
+				</c:if>
+				<c:if test="#{compBean1Editable == false}">
+					<h:outputLabel title="#{compBean1Lable}"> 
+						<h:outputText value="#{compBean1Lable}"/>
+					</h:outputLabel>
+				</c:if>
+			</td>
+			</c:if>
+			</h:panelGroup>
+		</c:when>
+		<c:otherwise>
+			<td class="portal-editable-2c-label">
+				<c:if test="#{!empty compBean1Id}">
+					<h:panelGroup id="#{compBean1Id}_label" styleClass="portal-editable-label-all">
+					<c:if test="#{empty compBean1Editable or compBean1Editable == true}">
+						<h:outputLabel for="#{compBean1Id}" title="#{compBean1Lable}"> 
+							<h:outputText value="#{compBean1Lable}"/>
+						</h:outputLabel>
+					</c:if>
+					<c:if test="#{compBean1Editable == false}">
+						<h:outputLabel title="#{compBean1Lable}"> 
+							<h:outputText value="#{compBean1Lable}"/>
+						</h:outputLabel>
+					</c:if>
+					</h:panelGroup>
+				</c:if>
+			</td>
+			<td class="portal-editable-2c-content">
+				<c:if test="#{!empty compBean1Id}">
+					<c:if test="#{empty compBean1Editable or compBean1Editable == true}">
+						<ui:decorate template="/layout/input/elements/elementWrapper.xhtml">
+							<ui:param name="compId" value="#{compBean1Id}" />
+							<ui:param name="compRequired" value="#{compBean1Required}" />
+							<ui:insert name="compBean1Content" />
+						</ui:decorate>
+					</c:if>
+					<c:if test="#{compBean1Editable == false}">
+						<ui:insert name="compBean1Content" />
+					</c:if>
+				</c:if>
+			</td>
+			<td class="portal-editable-2c-label">
+				<c:if test="#{!empty compBean2Id}">
+					<h:panelGroup id="#{compBean2Id}_label" styleClass="portal-editable-label-all">
+					<c:if test="#{empty compBean2Editable or compBean2Editable == true}">
+						<h:outputLabel for="#{compBean2Id}" title="#{compBean2Lable}"> 
+							<h:outputText value="#{compBean2Lable}"/>
+						</h:outputLabel>
+					</c:if>
+					<c:if test="#{compBean2Editable == false}">
+						<h:outputLabel title="#{compBean2Lable}"> 
+							<h:outputText value="#{compBean2Lable}"/>
+						</h:outputLabel>
+					</c:if>
+					</h:panelGroup>
+				</c:if>
+			</td>
+			<td class="portal-editable-2c-content">
+				<c:if test="#{!empty compBean2Id}">
+					<c:if test="#{empty compBean2Editable or compBean2Editable == true}">
+						<ui:decorate template="/layout/input/elements/elementWrapper.xhtml">
+							<ui:param name="compId" value="#{compBean2Id}" />
+							<ui:param name="compRequired" value="#{compBean2Required}" />
+							<ui:insert name="compBean2Content" />
+						</ui:decorate>
+					</c:if>
+					<c:if test="#{compBean2Editable == false}">
+						<ui:insert name="compBean2Content" />
+					</c:if>
+				</c:if>
+			</td>
+		</c:otherwise>
+	</c:choose>
+	</tr>
+	<c:if test="#{compType eq 'single-all'}">
+	<c:if test="#{!empty compBean1Id}">
+	<tr>
+		<td colspan="4">
+			<c:if test="#{empty compBean1Editable or compBean1Editable == true}">
+				<ui:decorate template="/layout/input/elements/elementWrapper.xhtml">
+					<ui:param name="compId" value="#{compBean1Id}" />
+					<ui:param name="compRequired" value="#{compBean1Required}" />
+					<ui:insert name="compBean1Content" />
+				</ui:decorate>
+			</c:if>
+			<c:if test="#{compBean1Editable == false}">
+				<ui:insert name="compBean1Content" />
+			</c:if>
+		</td>
+	</tr>
+	</c:if>
+	</c:if>
+
+</ui:composition>

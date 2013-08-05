@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AppList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="D:\javawork\workspace\imeta3.0\imeta-generator\src\main\resources\META-INF\schema\apptemplate.xsd">
+	<App id="databaseSetting" type="app" description="添加数据库" title="添加数据库" titleAlt="添加数据库" img="dock/data_cloud.png">
+		<DialogAttr key="width" value="800"/>
+		<DialogAttr key="height" value="600"/>
+		<DialogAttr key="minWidth" value="800"/>
+		<DialogAttr key="minHeight" value="600"/>
+	</App>
+</AppList>

@@ -1,0 +1,15 @@
+({
+	"title" : "创建菜单",
+	"link" : "webapp/imeta/js/jquery.ilog.json",
+	"description" : "用于创建日志",
+	"modified" : "2009-01-29 07:00",
+	"generator" : "peter",
+	"items" : [{
+		"createTag" : "<div></div>",
+		"attr" : {
+			"id" : "log_bar",
+			"class" : "log_bar"
+		},
+		"loadUrl" : "ImetaAction!loadLogBar.action"
+	}]
+})

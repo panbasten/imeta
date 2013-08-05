@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/NavPage" >
+
+    <ScrollView
+        android:id="@+id/mm_body_sv"
+        style="@style/MMScroll" >
+
+        <LinearLayout
+            style="@style/MMBody"
+            android:padding="0.0dip" >
+
+            <LinearLayout
+                style="@style/MMBlock"
+                android:layout_height="fill_parent"
+                android:padding="10.0dip" >
+
+                <EditText
+                    android:id="@+id/contact_search_account_et"
+                    style="@style/MMLineEditText"
+                    android:hint="@string/contact_search_account_hint" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

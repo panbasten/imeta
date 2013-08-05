@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0" >
+
+        <ListView
+            android:id="@+id/address_contactlist"
+            style="@style/NavPage"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:cacheColorHint="#ffffffff"
+            android:divider="@null"
+            android:dividerHeight="0.0px"
+            android:focusable="true"
+            android:listSelector="@null"
+            android:scrollbars="none"
+            android:transcriptMode="disabled" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent" >
+
+            <com.plywet.mm.ui.AlphabetScrollBar
+                android:id="@+id/address_scrollbar"
+                android:layout_width="25.0dip"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="0.0dip" />
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>

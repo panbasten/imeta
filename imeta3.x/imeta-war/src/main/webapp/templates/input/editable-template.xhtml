@@ -1,0 +1,41 @@
+<!-- 
+该模板是用来显示编辑页面
+参数：	产生表格头部
+compColumnNum : 	显示多少列
+compLabelStyle :	标题的样式
+compContentStyle :	内容的样式
+-->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<c:if test="#{empty compColumnNum}">
+		<ui:param name="compColumnNum" value="2"/>
+	</c:if>
+	
+	<c:if test="#{empty compLabelStyle}">
+		<ui:param name="compLabelStyle" value="width:15%;"/>
+	</c:if>
+	
+	<c:if test="#{empty compContentStyle}">
+		<ui:param name="compContentStyle" value="width:35%;"/>
+	</c:if>
+
+	<table class="portal-editable" cellspacing="5">
+		<thead class="portal-editable-head">
+		<tr>
+			<c:forEach begin="1" end="#{compColumnNum}">
+			<th style="#{compLabelStyle}"></th>
+			<th style="#{compContentStyle}"></th>
+			</c:forEach>
+		</tr>
+		</thead>
+		<tbody>
+			<ui:insert />
+		</tbody>
+	</table>
+
+</ui:composition>

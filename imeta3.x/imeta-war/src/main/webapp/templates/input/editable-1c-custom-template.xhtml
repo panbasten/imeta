@@ -1,0 +1,75 @@
+<!-- 
+该模板是用来显示编辑页面的一行
+
+参数：
+compBeanId : 		第一个组件的ID
+compBeanLable : 	第一个组件的Label
+compBeanEditable : 第一个组件是否可以编辑
+compBeanRequired : 第一个组件是否必填
+
+代码区：
+compBeanContent : 	第一个组件的内容代码
+
+-->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<tr>
+		<td class="portal-editable-1c-label">
+			<c:if test="#{!empty compBeanId}">
+				<h:panelGroup id="#{compBeanId}_label" styleClass="portal-editable-label-all">
+				<c:if test="#{empty compBeanEditable or compBeanEditable == true}">
+					<h:outputLabel for="#{compBeanId}" title="#{compBeanLable}"> 
+						<h:outputText value="#{compBeanLable}"/>
+					</h:outputLabel>
+				</c:if>
+				<c:if test="#{compBeanEditable == false}">
+					<h:outputLabel title="#{compBeanLable}"> 
+						<h:outputText value="#{compBeanLable}"/>
+					</h:outputLabel>
+				</c:if>
+				</h:panelGroup>
+			</c:if>
+		</td>
+		<td class="portal-editable-1c-content">
+			<c:if test="#{compType ne 'single-all'}">
+			<c:if test="#{!empty compBeanId}">
+				<c:if test="#{empty compBeanEditable or compBeanEditable == true}">
+					<ui:decorate template="/templates/input/elements/elementWrapper.xhtml">
+						<ui:param name="compId" value="#{compBeanId}" />
+						<ui:param name="compRequired" value="#{compBeanRequired}" />
+						<ui:insert name="compBeanContent" />
+					</ui:decorate>
+				</c:if>
+				<c:if test="#{compBeanEditable == false}">
+					<ui:insert name="compBeanContent" />
+				</c:if>
+			</c:if>
+			</c:if>
+		</td>
+	</tr>
+	
+	<c:if test="#{compType eq 'single-all'}">
+	<c:if test="#{!empty compBeanId}">
+	<tr>
+		<td colspan="2">
+			<c:if test="#{empty compBeanEditable or compBeanEditable == true}">
+				<ui:decorate template="/templates/input/elements/elementWrapper.xhtml">
+					<ui:param name="compId" value="#{compBeanId}" />
+					<ui:param name="compRequired" value="#{compBeanRequired}" />
+					<ui:insert name="compBeanContent" />
+				</ui:decorate>
+			</c:if>
+			<c:if test="#{compBeanEditable == false}">
+				<ui:insert name="compBeanContent" />
+			</c:if>
+		</td>
+	</tr>
+	</c:if>
+	</c:if>
+
+</ui:composition>

@@ -1,0 +1,19 @@
+<f:view xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+	
+    
+	<p:dialog widgetVar="terminal_d" width="600" height="400" header="终端" resizable="false" showEffect="fade" hideEffect="fade"
+              onHide="dock_w.unselectItem('dock_terminal');"
+              styleClass="terminalDialog">
+        <h:form>
+            <p:terminal widgetVar="terminal" width="590px"
+                    prompt="imeta $"
+                    welcomeMessage="欢迎使用私有云服务平台终端"/>
+        </h:form>
+    </p:dialog>
+
+</f:view>   

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repositories>
+  <connection>
+    <name>imeta_conn</name>
+    <server>localhost</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>imeta</database>
+    <port>3306</port>
+    <username>root</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ce10cc9da0ce</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>Y</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>Y</attribute></attribute>
+      <attribute><code>INITIAL_POOL_SIZE</code><attribute>10</attribute></attribute>
+      <attribute><code>MAXIMUM_POOL_SIZE</code><attribute>20</attribute></attribute>
+      <attribute><code>POOLING_maxWait</code><attribute>-1</attribute></attribute>
+      <attribute><code>POOLING_defaultAutoCommit</code><attribute>false</attribute></attribute>
+      <attribute><code>POOLING_timeBetweenEvictionRunsMillis</code><attribute>3600000</attribute></attribute>
+      <attribute><code>POOLING_minEvictableIdleTimeMillis</code><attribute>1800000</attribute></attribute>
+      <attribute><code>POOLING_numTestsPerEvictionRun</code><attribute>10</attribute></attribute>
+      <attribute><code>POOLING_testWhileIdle</code><attribute>Y</attribute></attribute>
+      <attribute><code>POOLING_validationQuery</code><attribute>SELECT 1 FROM r_user</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>orcl_conn</name>
+    <server>192.168.90.18</server>
+    <type>ORACLE</type>
+    <access>Native</access>
+    <database>orcl</database>
+    <port>1521</port>
+    <username>kettle</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ce10cc9da0ce</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>Y</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>1521</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>Y</attribute></attribute>
+      <attribute><code>POOLING_maxWait</code><attribute>-1</attribute></attribute>
+      <attribute><code>POOLING_defaultAutoCommit</code><attribute>false</attribute></attribute>
+      <attribute><code>POOLING_timeBetweenEvictionRunsMillis</code><attribute>3600000</attribute></attribute>
+      <attribute><code>POOLING_minEvictableIdleTimeMillis</code><attribute>1800000</attribute></attribute>
+      <attribute><code>POOLING_numTestsPerEvictionRun</code><attribute>10</attribute></attribute>
+      <attribute><code>POOLING_testWhileIdle</code><attribute>Y</attribute></attribute>
+      <attribute><code>POOLING_validationQuery</code><attribute>SELECT 1 FROM r_user</attribute></attribute>
+    </attributes>
+  </connection>
+  <repository>
+    <name>imeta</name>
+    <description/>
+    <connection>imeta_conn</connection>
+  </repository>
+  <repository>
+    <name>orcl</name>
+    <description/>
+    <connection>orcl_conn</connection>
+  </repository>
+</repositories>

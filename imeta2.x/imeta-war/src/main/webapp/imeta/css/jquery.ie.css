@@ -1,0 +1,82 @@
+.x-tab-scroller-left {
+	left:0px;
+	top:1px;
+	width:18px;
+}
+
+.x-tab-scroller-left-disabled {
+	cursor:default;
+	background:transparent url(../images/iportaltab/scroll-left.gif) no-repeat scroll -18px 0;
+	filter:alpha(opacity=40);
+	opacity:0.4;
+	width:18px
+}
+
+.x-tab-scroller-right {
+	top:1px;
+	right:0px;
+	width:18px;
+}
+
+
+.x-tab-scroller-right-disabled {
+	cursor:default;
+	background:transparent url(../images/iportaltab/scroll-right.gif) no-repeat scroll 0 0;
+	filter:alpha(opacity=40);
+	opacity:0.4;
+	width:18px
+}
+
+.toolbar-content em {
+	font-size: 9px !important;
+}
+
+.windowTop{
+	background-image: url(../images/window/window_top_end.gif) !important;
+}
+
+.windowTopContent {
+	background-image: url(../images/window/window_top_start.gif) !important;
+}
+
+.windowBottom {
+	background-image: url(../images/window/window_bottom_end.gif) !important;
+}
+
+.windowBottomContent {
+	background-image: url(../images/window/window_bottom_start.gif) !important;
+}
+
+
+/* 菜单内容部分css */
+.tab_cont,
+.menu_space{
+	width:100%;
+	overflow:hidden; 
+}
+
+
+.menu-tab-scroller-left{
+	right:0px;
+	top:19px;
+	width:17px;
+}
+.menu-tab-scroller-right {
+	right:0px;
+	top:42px;
+	width:17px;
+}
+
+.transformation span.folder, .transformation span.file,
+.job span.folder, .job span.file,
+.object-trans span.folder, .object-trans span.file,
+.object-map span.folder, .object-map span.file
+{
+	width:60%;
+}
+
+.loginRepository{
+	width:55% !important;
+	background:url(../../framework/images/icons/database_connect.png) no-repeat 0px 0px !important;
+	border:0px !important;
+}

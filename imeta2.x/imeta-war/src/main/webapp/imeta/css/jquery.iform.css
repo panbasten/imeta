@@ -1,0 +1,227 @@
+@charset "utf-8";
+/**********************************
+
+Name: cmxform Styles
+
+***********************************/
+form.cmxform {
+	color: #333;
+}
+
+form.cmxform * {
+	font: 12px tahoma, arial, helvetica;
+}
+
+form.cmxform legend, form.cmxform label,
+form.cmxform input.label,
+.iformtab_div ul li a.tabactive {
+	font-weight: bold;
+	padding: 0 2px 0 5px;
+	color: #333;
+}
+
+form.cmxform legend {
+	margin-left:10px;
+}
+
+form.cmxform input.label {
+	border: none;
+	background: none;
+	padding: 0 10px 0 0;
+	
+}
+
+form.cmxform fieldset {
+	border:none;
+	border-top: 1px solid #C9DCA6;
+	background-color: #F8FDEF;
+	margin:5px;
+	margin-top:0px;
+}
+
+form.cmxform fieldset fieldset {
+	border: 1px solid #C9DCA6;
+	background: none;
+}
+
+form.cmxform fieldset p,form.cmxform fieldset div,form.cmxform fieldset fieldset {
+	padding-top: 5px;
+	
+}
+
+form.cmxform fieldset{
+	padding: 10px 5px 5px 5px;
+}
+
+form.cmxform fieldset .error p {
+	background: none;
+	color: red;
+	padding: 0px;
+}
+
+form.cmxform input,form.cmxform textarea,form.cmxform select {
+	border: 1px solid #99BBE8;
+	font-family: inherit;
+	font-size: 100%;
+	padding-left: 3px;
+	width:100%;
+}
+
+form.cmxform div.error {
+	padding: 0 0 0 30px;
+}
+
+form.cmxform input.error,
+form.cmxform textarea.error,
+form.cmxform select.error {
+	border: 1px dotted red;
+}
+
+form.cmxform p.btn {
+	float: right;
+	background: none;
+	padding: 0 15px 0 0;
+}
+
+form.cmxform p.btn input {
+	margin: 10px 5px 10px 5px;
+	width:auto;
+}
+
+input.i-button,
+form.cmxform input.i-button {
+	width:auto;
+	border: 3px double #C9DCA6;
+	background-color: #F2F2F2;
+	padding-top: 1px;
+	cursor:pointer;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#B3D997);
+}
+
+input.i-button {
+	margin : 5px;
+	font: 12px tahoma, arial, helvetica;
+}
+
+form.cmxform .notDisplay {
+	display : none !important;
+}
+
+
+/* 菜单div css */
+.iformtab_div {
+	position: relative;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.iformtab_div ul {
+	list-style: none;
+}
+
+.iformtab_div ul li {
+	display: inline;
+	background: none;
+	height: 18px;
+	margin: 0 5px -1px 0;
+	float: left;
+	padding: 1px 1px 0 1px;
+}
+
+.iformtab_div ul li.tabactive {
+	display: inline;
+	height: 18px;
+	margin: 0 5px 0 0;
+	border: 1px solid #C9DCA6;
+	border-bottom: 2px solid #FFFFFF;
+	float: left;
+	padding: 1px 1px 0 1px
+}
+
+.iformtab_div ul li a {
+	display: block;
+	float: left;
+	height: 100%;
+	padding: 2px 10px 0 10px;
+	cursor: pointer;
+}
+
+.iformtab_div ul li a.tabactive {
+	background: #FFFFFF;
+}
+
+.iformtab_div ul li a:hover {
+	background: #999;
+	color: #fff;
+}
+
+/* 菜单头部css */
+.iformtab_head {
+	height: 20px;
+	padding: 0 20px 0;
+	border-bottom: 1px solid #C9DCA6;
+}
+
+/* 菜单内容部分css */
+.iformtab_cont {
+	padding: 1px;
+	border: 1px solid #C9DCA6;
+	border-top: none;
+	background:#FFFFFF
+}
+
+/* 菜单详细内容部分css */
+.iformtab_detailcont {
+	height: 56px;
+	position: relative;
+}
+
+.iformtab_space {
+	padding: 1px;
+}
+
+.clearfix {
+	margin: auto;
+}
+
+.iformtab_space_tab {
+	position: relative;
+	padding: 5px;
+	left: 0px;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.windowLoading {
+	position: absolute;
+	left: 45%;
+	top: 40%;
+	padding: 2px;
+	height: auto;
+}
+
+.windowLoading img {
+	margin-bottom: 0px;
+	margin-right: 8px;
+	align: absmiddle;
+	height: 32;
+	width: 32;
+}
+
+.windowLoading .windowLoading-indicator {
+	color: #999;
+	font: bold 12px tahoma, arial, helvetica;
+	padding: 10px;
+	margin-bottom: 5px;
+	text-align: center;
+	height: auto;
+}
