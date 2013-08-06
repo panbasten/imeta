@@ -1,6 +1,3 @@
-jQuery.imeta = {};
-jQuery.imeta.steps = {};
-
 jQuery.imeta.parameter = {
     getfields : function(e,v,r,fname,getfieldsType){
 		var elId = e.target.id;

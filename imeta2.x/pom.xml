@@ -508,7 +508,7 @@
 		</dependencies>
 	</dependencyManagement>
 
-	<!--  -->
+	<!--  
 	<repositories>
 		<repository>
 			<id>mvnrepo</id>
@@ -519,13 +519,12 @@
 			<name>Pentaho Maven Repository</name>
 			<url>http://repository.pentaho.org/artifactory/repo</url>
 		</repository>
-		<!-- 
 		<repository>
 			<id>nexus.3rd.party</id>
 			<name>Nexus 3rd Party Repository</name>
 			<url>http://192.168.90.18:8081/nexus/content/repositories/thirdparty
 		</url>
-		</repository> -->
+		</repository>
 		<repository>
 			<id>jboss</id>
 			<name>jboss</name>
@@ -555,7 +554,7 @@
 			<url>http://repository.jboss.org/nexus/content/groups/public-jboss</url> 
 		</repository> 
 	</repositories>
-	
+	-->s
 	 
 	<build>
 		<pluginManagement>

@@ -45,7 +45,11 @@
 								imeta/js/jquery.icontent.js,
 								imeta/js/jquery.iportaltab.js,
 								imeta/js/jquery.iform.js,
-								imeta/js/jquery.imeta.js,
+								
+								imeta/js/di/*.*,
+								imeta/js/steps/*.*,
+								imeta/js/jobEntries/*.*,
+								
 								imeta/js/jquery.imetalogin.js
 							</warSourceExcludes>
 						</configuration>
@@ -96,7 +100,18 @@
 										<include>${project.build.directory}/imeta/imeta/js/jquery.icontent.js</include>
 										<include>${project.build.directory}/imeta/imeta/js/jquery.iportaltab.js</include>
 										<include>${project.build.directory}/imeta/imeta/js/jquery.iform.js</include>
-										<include>${project.build.directory}/imeta/imeta/js/jquery.imeta.js</include>
+										
+										<include>${project.build.directory}/imeta/imeta/js/di/jquery.imeta.js</include>
+										<include>${project.build.directory}/imeta/imeta/js/di/jquery.imeta.parameter.js</include>
+										<include>${project.build.directory}/imeta/imeta/js/di/jquery.imeta.trans.js</include>
+										<include>${project.build.directory}/imeta/imeta/js/di/jquery.imeta.job.js</include>
+										<include>${project.build.directory}/imeta/imeta/js/di/jquery.imeta.contextMenu.js</include>
+										<include>${project.build.directory}/imeta/imeta/js/di/jquery.imeta.execute.js</include>
+										<include>${project.build.directory}/imeta/imeta/js/di/jquery.imeta.db.js</include>
+										
+										<include>${project.build.directory}/imeta/imeta/js/steps/*.js</include>
+										<include>${project.build.directory}/imeta/imeta/js/jobEntries/*.js</include>
+										
 										<include>${project.build.directory}/imeta/imeta/js/jquery.imetalogin.js</include>
 									</includes>
 								</aggregation>
