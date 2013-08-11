@@ -30,7 +30,7 @@ JobEntryDialogInterface{
 	private ColumnFormDataMeta columnFormDataMeta;
 	
 	/**
-	 * 任务实体名
+	 * 作业实体名
 	 */
 	private LabelInputMeta name;
 	
@@ -70,8 +70,8 @@ JobEntryDialogInterface{
 			this.columnFormDataMeta = new ColumnFormDataMeta(id, null);
 			this.columnFormMeta = new ColumnFormMeta(columnFormDataMeta);
 
-			// 任务实体名
-			this.name = new LabelInputMeta(id + ".name", "任务实体名", null, null,
+			// 作业实体名
+			this.name = new LabelInputMeta(id + ".name", "作业实体名", null, null,
 					null, super.getJobEntryName(), null, ValidateForm
 							.getInstance().setRequired(true));
 			this.name.setSingle(true);

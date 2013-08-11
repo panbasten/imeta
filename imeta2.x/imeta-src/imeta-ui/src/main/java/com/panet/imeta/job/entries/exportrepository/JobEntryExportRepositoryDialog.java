@@ -233,7 +233,7 @@ public class JobEntryExportRepositoryDialog extends JobEntryDialog implements
 			//Export type
 			List<OptionDataMeta> options = new ArrayList<OptionDataMeta>();
 			options.add(new OptionDataMeta("export_type", "导出所有对象"));
-			options.add(new OptionDataMeta("export_type", "仅导出任务对象"));
+			options.add(new OptionDataMeta("export_type", "仅导出作业对象"));
 			options.add(new OptionDataMeta("export_type", "仅导出转换对象"));
 			options.add(new OptionDataMeta("export_type", "导出一个文件夹"));
 			options.add(new OptionDataMeta("export_type", "按文件夹导出"));

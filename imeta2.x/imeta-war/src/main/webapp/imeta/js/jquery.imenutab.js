@@ -100,7 +100,7 @@ jQuery.imenu = {
 		});
 		$.ajax({
             type: "POST",
-            url: "ImetaAction!loadLog.action",
+            url: "ImetaLogAction!loadLogDialog.action",
             dataType: "json",
             success : function(json){
                 $.createObjFromJson(json, "#logMain", "jQuery.iformwindow.extendContentFn");
@@ -221,7 +221,7 @@ jQuery.imenu = {
             logout : function(e){
 				$.ajax({
 	                type: "POST",
-	                url: "ImetaAction!logout.action",
+	                url: "ImetaScurityAction!logout.action",
 	                dataType: "json",
 	                success : globalError
 	            });
@@ -243,7 +243,7 @@ jQuery.imenu = {
 							text : "确定",
 							btnWidth : 50
 						}],
-					content : $("<select></select>").html("<option value='trans'>转换</option><option value='job'>任务</option>"),
+					content : $("<select></select>").html("<option value='trans'>转换</option><option value='job'>作业</option>"),
 					fn : function(m,n){
 					    if(m == 'ok'){
 					        var elType = n.find('option:selected').val();
@@ -411,7 +411,7 @@ jQuery.imenu = {
 			startSuspend : function(c){
 				var activeTabId = jQuery.iPortalTab.activeTabId;
 				if(!activeTabId){
-					$.imessagebox.showAlert("请先选择一个任务对象！");
+					$.imessagebox.showAlert("请先选择一个作业对象！");
 					return;
 				}
 				jQuery.imenu.programLoading(true,"program");
@@ -435,7 +435,7 @@ jQuery.imenu = {
 			startStop : function(c){
 				var activeTabId = jQuery.iPortalTab.activeTabId;
 				if(!activeTabId){
-					$.imessagebox.showAlert("请先选择一个任务对象！");
+					$.imessagebox.showAlert("请先选择一个作业对象！");
 					return;
 				}
 				jQuery.imenu.programLoading(true,"program");
@@ -476,7 +476,7 @@ jQuery.imenu = {
 				
 				$.ajax({
 	                type: 'post',
-			        url: 'ImetaAction!checkTrans.action',
+			        url: 'ImetaTransAction!checkTrans.action',
 			        dataType: "json",
 			        success: function(json){ 
 			        	win.appendContent(json);
@@ -519,7 +519,7 @@ jQuery.imenu = {
 				
 				$.ajax({
 	                type: 'post',
-			        url: 'ImetaAction!analyseImpactTrans.action',
+			        url: 'ImetaTransAction!analyseImpactTrans.action',
 			        dataType: "json",
 			        success: function(json){ 
 			        	win.appendContent(json);
@@ -546,7 +546,7 @@ jQuery.imenu = {
 			jobRun : function(c){
 				var activeTabId = jQuery.iPortalTab.activeTabId;
 				if(!activeTabId){
-					$.imessagebox.showAlert("请先选择一个任务对象！");
+					$.imessagebox.showAlert("请先选择一个作业对象！");
 					return;
 				}
 				if($.iformwindow.activeWindow(activeTabId)){
@@ -558,7 +558,7 @@ jQuery.imenu = {
 				
 				var win = $.iformwindow('#ibody',{
 				                    id: activeTabId,
-				                    title: '执行任务',
+				                    title: '执行作业',
 				                    showLoading : true
 				                });
 				
@@ -580,7 +580,7 @@ jQuery.imenu = {
 			jobStop : function(c){
 				var activeTabId = jQuery.iPortalTab.activeTabId;
 				if(!activeTabId){
-					$.imessagebox.showAlert("请先选择一个任务对象！");
+					$.imessagebox.showAlert("请先选择一个作业对象！");
 					return;
 				}
 				jQuery.imenu.programLoading(true,"program");
@@ -608,13 +608,13 @@ jQuery.imenu = {
 				
 				var win = $.iformwindow('#ibody',{
 				                    id: 'jobList',
-				                    title: '任务列表',
+				                    title: '作业列表',
 				                    showLoading : false
 				                });
 				
 				$.ajax({
 	                type: "POST",
-	                url: "ImetaAction!jobList.action",
+	                url: "ImetaBaseAction!jobList.action",
 	                dataType: "json",
 	                success : function(json){
 		               	win.appendContent(json);
@@ -625,7 +625,7 @@ jQuery.imenu = {
 				jQuery.imenu.programLoading(true,"program");
 				$.ajax({
 					type: "post",
-					url:"ImetaAction!jobListStop.action",
+					url:"ImetaBaseAction!jobListStop.action",
 					dataType:"json",
 					data : {
 						dirId : dirId,
@@ -930,7 +930,7 @@ jQuery.imenu = {
 				
 				$.ajax({
 	                type: "POST",
-	                url: "ImetaAction!createUser.action",
+	                url: "ImetaScurityAction!createUser.action",
 	                dataType: "json",
 	                success : function(json){
 		               	win.appendContent(json);
@@ -947,7 +947,7 @@ jQuery.imenu = {
 					var id = elId.split(".")[0];
 					$("#"+id).ajaxSubmit({
                         type: "POST",
-						url:"ImetaAction!saveUser.action",
+						url:"ImetaScurityAction!saveUser.action",
 						dataType:"json",
 						data : {
 							id : id
@@ -977,7 +977,7 @@ jQuery.imenu = {
 				
 				$.ajax({
 	                type: "POST",
-	                url: "ImetaAction!toDeleteUser.action",
+	                url: "ImetaScurityAction!toDeleteUser.action",
 	                dataType: "json",
 	                success : function(json){
 		               	win.appendContent(json);
@@ -994,7 +994,7 @@ jQuery.imenu = {
 					var id = elId.split(".")[0];
 					$("#"+id).ajaxSubmit({
                         type: "POST",
-						url:"ImetaAction!deleteUser.action",
+						url:"ImetaScurityAction!deleteUser.action",
 						dataType:"json",
 						data : {
 							id : id
@@ -1027,7 +1027,7 @@ jQuery.imenu = {
 				
 				$.ajax({
 	                type: "POST",
-	                url: "ImetaAction!toEditCurrentUser.action",
+	                url: "ImetaScurityAction!toEditCurrentUser.action",
 	                dataType: "json",
 	                success : function(json){
 		               	win.appendContent(json);
@@ -1044,7 +1044,7 @@ jQuery.imenu = {
 					var id = elId.split(".")[0];
 					$("#"+id).ajaxSubmit({
                         type: "POST",
-						url:"ImetaAction!editCurrentUser.action",
+						url:"ImetaScurityAction!editCurrentUser.action",
 						dataType:"json",
 						data : {
 							id : id
@@ -1064,7 +1064,7 @@ jQuery.imenu = {
 			connectRep : function(e){
 				$.ajax({
 	                type: "POST",
-	                url: "ImetaAction!logout.action",
+	                url: "ImetaScurityAction!logout.action",
 	                dataType: "json",
 	                success : globalError
 	            });
@@ -1082,7 +1082,7 @@ jQuery.imenu = {
 				
 				$.ajax({
 	                type: "POST",
-	                url: "ImetaAction!connectRep.action",
+	                url: "ImetaDBAction!connectRep.action",
 	                dataType: "json",
 	                success : function(json){
 		               	win.appendContent(json);
@@ -1093,7 +1093,7 @@ jQuery.imenu = {
 				ok : function(e,v){
 					$("#connection_rep").ajaxSubmit({
                         type: "POST",
-						url:"ImetaAction!connectRepSubmit.action",
+						url:"ImetaDBAction!connectRepSubmit.action",
 						dataType:"json",
 						success : function(json){
 								$("#window-connection_rep").remove();
@@ -1112,7 +1112,7 @@ jQuery.imenu = {
 				}
 				$.ajax({
 	                type: "POST",
-	                url: "ImetaAction!disConnectRep.action",
+	                url: "ImetaDBAction!disConnectRep.action",
 	                dataType: "json",
 	                success : function(json){
 	                    $.imessagebox("#ibody",json);
@@ -1134,7 +1134,7 @@ jQuery.imenu = {
 				
 				$.ajax({
 	                type: "POST",
-	                url: "ImetaAction!detectRep.action",
+	                url: "ImetaDBAction!detectRep.action",
 	                dataType: "json",
 	                data : jQuery.cutil.objectToUrl({
 	                	id : id,
@@ -1198,7 +1198,7 @@ jQuery.imenu = {
     					         jQuery.imenu.programLoading(true,"program");
     					         $.ajax({
                 	                type: "POST",
-                	                url: "ImetaAction!addDirectory.action",
+                	                url: "ImetaBaseAction!addDirectory.action",
                 	                dataType: "json",
                 	                data : jQuery.cutil.objectToUrl({
                 	                	directoryId : t.getAttribute('directoryId'),
@@ -1227,7 +1227,7 @@ jQuery.imenu = {
     					         jQuery.imenu.programLoading(true,"program");
     					         $.ajax({
                 	                type: "POST",
-                	                url: "ImetaAction!deleteDirectory.action",
+                	                url: "ImetaBaseAction!deleteDirectory.action",
                 	                dataType: "json",
                 	                data : jQuery.cutil.objectToUrl({
                 	                	directoryId : t.getAttribute('directoryId')
@@ -1256,7 +1256,7 @@ jQuery.imenu = {
     					         jQuery.imenu.programLoading(true,"program");
     					         $.ajax({
                 	                type: "POST",
-                	                url: "ImetaAction!editDirectory.action",
+                	                url: "ImetaBaseAction!editDirectory.action",
                 	                dataType: "json",
                 	                data : jQuery.cutil.objectToUrl({
                 	                	directoryId : t.getAttribute('directoryId'),
@@ -1299,7 +1299,7 @@ jQuery.imenu = {
 					var prop = $("[id="+id+".btn.flush]");
 					$.ajax({
 		                type: "GET",
-		                url: "ImetaAction!loadRepExplorerObjects.action",
+		                url: "ImetaDBAction!loadRepExplorerObjects.action",
 		                data : jQuery.cutil.objectToUrl({
 		                	id : id,
 		                	// 显示的元素类型
@@ -1325,7 +1325,7 @@ jQuery.imenu = {
 					var id = t.id.split(".")[0];
 					$.ajax({
 		                type: "GET",
-		                url: "ImetaAction!loadRepDirectoryObjects.action",
+		                url: "ImetaDBAction!loadRepDirectoryObjects.action",
 		                data : jQuery.cutil.objectToUrl({
 		                	id : id,
 		                	// 显示的元素类型
@@ -1391,7 +1391,7 @@ jQuery.imenu = {
 			                });
 					        $.ajax({
             	                type: "POST",
-            	                url: "ImetaAction!getDirectory.action",
+            	                url: "ImetaBaseAction!getDirectory.action",
             	                data: jQuery.cutil.objectToUrl({
             	                    id : "getDirectory",
             	                    customOkFn : "jQuery.imenu.iMenuFn.file.getDirectory",
@@ -1446,7 +1446,7 @@ jQuery.imenu = {
 					    btnWidth : "100",
 					    removeMessage : false
 					}],
-					message : "请输入新任务的名字",
+					message : "请输入新作业的名字",
 					fn : function(m,n){
 					    if(m == 'getDirectory'){
 					        var win = $.iformwindow('#ibody',{
@@ -1458,7 +1458,7 @@ jQuery.imenu = {
 			                });
 					        $.ajax({
             	                type: "POST",
-            	                url: "ImetaAction!getDirectory.action",
+            	                url: "ImetaBaseAction!getDirectory.action",
             	                data: jQuery.cutil.objectToUrl({
             	                    id : "getDirectory",
             	                    customOkFn : "jQuery.imenu.iMenuFn.file.getDirectory",
@@ -1514,7 +1514,7 @@ jQuery.imenu = {
 				
                 $.ajax({
 	                type: "POST",
-	                url: "ImetaAction!createDatabase.action",
+	                url: "ImetaDBAction!createDatabase.action",
 	                dataType: "json",
 	                success : function(json){
 	                	win.appendContent(json);
@@ -1661,7 +1661,7 @@ jQuery.imenu = {
 	                });
 			        $.ajax({
     	                type: "POST",
-    	                url: "ImetaAction!getDirectory.action",
+    	                url: "ImetaBaseAction!getDirectory.action",
     	                data: jQuery.cutil.objectToUrl({
     	                    id : "getDirectory",
     	                    customOkFn : "jQuery.imenu.iMenuFn.file.fromXMLToOpenBtn.pathBtnOk",
@@ -1760,7 +1760,7 @@ jQuery.imenu = {
 			                });
 					        $.ajax({
             	                type: "POST",
-            	                url: "ImetaAction!getDirectory.action",
+            	                url: "ImetaBaseAction!getDirectory.action",
             	                data: jQuery.cutil.objectToUrl({
             	                    id : "getDirectory",
             	                    customOkFn : "jQuery.imenu.iMenuFn.file.getDirectory",
@@ -1916,13 +1916,13 @@ jQuery.imenu = {
 				
 				var win = $.iformwindow('#ibody',{
                     id: 'jobStart',
-                    title: '任务启动管理',
+                    title: '作业启动管理',
                     showLoading : false
                 });
 				
 				$.ajax({
 	                type: "POST",
-	                url: "ImetaAction!jobStart.action",
+	                url: "ImetaBaseAction!jobStart.action",
 	                dataType: "json",
 	                success : function(json){
 		               	win.appendContent(json);
@@ -1937,7 +1937,7 @@ jQuery.imenu = {
 						jQuery.imenu.programLoading(true,"program");
 						$("#"+id).ajaxSubmit({
 							type:"POST",
-							url:"ImetaAction!settingJobStart.action",
+							url:"ImetaBaseAction!settingJobStart.action",
 							dataType:"json",
 							data : {
 								id : id
@@ -1958,13 +1958,13 @@ jQuery.imenu = {
 					settingOpen : function(dirId,jobId,jobName){
 						var win = $.iformwindow('#ibody',{
 		                    id: 'auto_run_job_setting_'+jobId,
-		                    title: '设置任务参数',
+		                    title: '设置作业参数',
 		                    showLoading : false
 		                });
 						
 						$.ajax({
 			                type: "POST",
-			                url: "ImetaAction!openAutoJobSetting.action",
+			                url: "ImetaBaseAction!openAutoJobSetting.action",
 			                dataType: "json",
 			                data : {
 								dirId : dirId,
@@ -1983,7 +1983,7 @@ jQuery.imenu = {
 						jQuery.imenu.programLoading(true,"program");
 						$("#"+id).ajaxSubmit({
 							type: "post",
-							url:"ImetaAction!submitAutoJobSetting.action",
+							url:"ImetaBaseAction!submitAutoJobSetting.action",
 							dataType:"json",
 							data : {
 								id : id,
@@ -2015,7 +2015,7 @@ jQuery.imenu = {
 				
 				$.ajax({
 	                type: "POST",
-	                url: "ImetaAction!stepPluginList.action",
+	                url: "ImetaBaseAction!stepPluginList.action",
 	                dataType: "json",
 	                success : function(json){
 		               	win.appendContent(json);
@@ -2035,7 +2035,7 @@ jQuery.imenu = {
 				
 				$.ajax({
 	                type: "POST",
-	                url: "ImetaAction!entryPluginList.action",
+	                url: "ImetaBaseAction!entryPluginList.action",
 	                dataType: "json",
 	                success : function(json){
 		               	win.appendContent(json);
@@ -2048,7 +2048,7 @@ jQuery.imenu = {
 				}
 				$.ajax({
 	                type: "POST",
-	                url: "ImetaAction!helpAbout.action",
+	                url: "ImetaBaseAction!helpAbout.action",
 	                success : function(data){
 		               	$.imessagebox.showAlert(data);
 	                }
@@ -2061,7 +2061,7 @@ jQuery.imenu = {
 	initMenu : function(){
 		$.ajax({
             type: "POST",
-            url: "ImetaAction!toCurrentUserLevel.action",
+            url: "ImetaScurityAction!toCurrentUserLevel.action",
             success: function(text){
 				
 				jQuery.imenu.userType = text;

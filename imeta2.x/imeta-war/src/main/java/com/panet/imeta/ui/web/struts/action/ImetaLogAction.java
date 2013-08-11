@@ -12,6 +12,8 @@ import org.springframework.stereotype.Controller;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.panet.imeta.repository.Repository;
+import com.panet.imeta.ui.Messages;
+import com.panet.imeta.ui.dialog.LogDialog;
 import com.panet.imeta.ui.exception.ImetaException;
 import com.panet.imeta.ui.meta.ImetaLog;
 import com.panet.imeta.ui.service.ImetaDelegates;
@@ -119,5 +121,22 @@ public class ImetaLogAction extends ActionSupport {
 
 		}
 		return null;
+	}
+	
+	/**
+	 * 载入日志对话框
+	 */
+	public void loadLogDialog() {
+		try {
+			HttpServletResponse response = ServletActionContext.getResponse();
+			response.setContentType("text/html; charset=UTF-8");
+
+			LogDialog log = new LogDialog();
+
+			response.getWriter().write(log.open().toString());
+		} catch (Exception e) {
+			delegates.getLog().logError(toString(),
+					Messages.getString("IMeta.Log.RunImetaAction", "loadLog"));
+		}
 	}
 }

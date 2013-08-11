@@ -97,7 +97,7 @@ public interface ImetaJobDelegate {
 	public void clearActiveJob();
 
 	/**
-	 * 加入任务的实体
+	 * 加入作业的实体
 	 * 
 	 * @throws ImetaException
 	 */

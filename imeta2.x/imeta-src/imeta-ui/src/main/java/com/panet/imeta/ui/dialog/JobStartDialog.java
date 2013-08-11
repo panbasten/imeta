@@ -112,10 +112,10 @@ public class JobStartDialog implements BaseDialogInterface {
 			// 得到form
 			this.columnFormDataMeta = new ColumnFormDataMeta(id, null);
 			this.columnFormMeta = new ColumnFormMeta(columnFormDataMeta);
-			this.jobList = new LabelGridMeta(id + "_list", "任务列表", 300);
+			this.jobList = new LabelGridMeta(id + "_list", "作业列表", 300);
 			this.jobList.addHeaders(new GridHeaderDataMeta[] {
 
-					new GridHeaderDataMeta(this.id + "_jobname", "任务名", null,
+					new GridHeaderDataMeta(this.id + "_jobname", "作业名", null,
 							false, 220),
 					new GridHeaderDataMeta(this.id + "_jobstat", "状态", null,
 							false, 220),
@@ -148,7 +148,7 @@ public class JobStartDialog implements BaseDialogInterface {
 
 			rtn.put("items", cArr);
 
-			rtn.put("title", "任务列表");
+			rtn.put("title", "作业列表");
 			rtn.put("id", this.id);
 
 			return rtn;

@@ -36,7 +36,7 @@
 			"attr" : {
 				"class" : "toolbar-input"
 			},
-			"html" : "视图类型: <select id='iov-sl' onchange='jQuery.imetabar.objectValueSelect(this);'><option value=''>--全部--</option><option value='Transformation'>转换</option><option value='Job'>任务</option></select>"
+			"html" : "视图类型: <select id='iov-sl' onchange='jQuery.imetabar.objectValueSelect(this);'><option value=''>--全部--</option><option value='Transformation'>转换</option><option value='Job'>作业</option></select>"
 		},{
 			"createTag" : "<div></div>",
 			"attr" : {

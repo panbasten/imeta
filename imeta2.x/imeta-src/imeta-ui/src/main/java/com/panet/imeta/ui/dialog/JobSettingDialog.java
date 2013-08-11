@@ -110,13 +110,13 @@ public class JobSettingDialog extends BaseJobDialog implements
 			this.columnFormMeta = new ColumnFormMeta(columnFormDataMeta);
 
 			// 得到tab
-			this.meta = new MenuTabMeta(id, new String[] { "任务", "参数", "日志" });
+			this.meta = new MenuTabMeta(id, new String[] { "作业", "参数", "日志" });
 			this.meta.setSingle(true);
 
 			/*******************************************************************
-			 * 0 任务
+			 * 0 作业
 			 ******************************************************************/
-			this.name = new LabelInputMeta(id + ".name", "任务名称", null, null,
+			this.name = new LabelInputMeta(id + ".name", "作业名称", null, null,
 					null, jobMeta.getName(), null, ValidateForm.getInstance()
 							.setRequired(true));
 			this.name.setSingle(true);
@@ -240,7 +240,7 @@ public class JobSettingDialog extends BaseJobDialog implements
 			this.logTable.setSingle(true);
 
 			this.batchIdUsed = new LabelInputMeta(id + ".batchIdUsed",
-					"继续任务批次ID", null, null, null, String.valueOf(jobMeta
+					"继续作业批次ID", null, null, null, String.valueOf(jobMeta
 							.isBatchIdUsed()),
 					InputDataMeta.INPUT_TYPE_CHECKBOX, null);
 
@@ -250,7 +250,7 @@ public class JobSettingDialog extends BaseJobDialog implements
 					InputDataMeta.INPUT_TYPE_CHECKBOX, null);
 
 			this.logfieldUsed = new LabelInputMeta(id + ".logfieldUsed",
-					"记录详细日志(调试阶段)", null, null, "注意：对于长时间执行的任务有内存溢出风险，所以仅限调试使用", String.valueOf(jobMeta
+					"记录详细日志(调试阶段)", null, null, "注意：对于长时间执行的作业有内存溢出风险，所以仅限调试使用", String.valueOf(jobMeta
 							.isLogfieldUsed()),
 					InputDataMeta.INPUT_TYPE_CHECKBOX, null);
 

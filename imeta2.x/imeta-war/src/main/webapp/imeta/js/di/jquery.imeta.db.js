@@ -51,7 +51,7 @@ jQuery.imeta.db = {
 			var dbId = id.split("_")[1];
 			$.ajax({
                 type: "POST",
-                url: "ImetaAction!settingDatabaseFields.action",
+                url: "ImetaDBAction!settingDatabaseFields.action",
                 data: jQuery.cutil.objectToUrl({
                 	databaseId : dbId,
                 	connType : $("[id="+id+".connectionType]").val(),
@@ -147,7 +147,7 @@ jQuery.imeta.db = {
 				
 				$("#"+id).ajaxSubmit({
 					type: "POST",
-					url:"ImetaAction!testDatabase.action",
+					url:"ImetaDBAction!testDatabase.action",
 					dataType:"json",
 					data : {
 						id : id,
@@ -179,7 +179,7 @@ jQuery.imeta.db = {
                 });
 				
 				$("#"+id).ajaxSubmit({
-					url:"ImetaAction!exploreDatabase.action",
+					url:"ImetaDBAction!exploreDatabase.action",
 					dataType:"json",
 					data : {
 						id : id,
@@ -215,7 +215,7 @@ jQuery.imeta.db = {
 				
 				$("#"+id).ajaxSubmit({
 					type: "POST",
-					url:"ImetaAction!createOrUpdateDatabase.action",
+					url:"ImetaDBAction!createOrUpdateDatabase.action",
 					dataType:"json",
 					data : {
 						id : id,

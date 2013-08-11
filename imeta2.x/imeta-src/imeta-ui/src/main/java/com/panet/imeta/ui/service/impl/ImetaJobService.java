@@ -49,12 +49,12 @@ public class ImetaJobService implements ImetaJobDelegate {
 	private static boolean autoRun = false;
 
 	/**
-	 * 任务种类
+	 * 作业种类
 	 */
 	private String[] categories = null;
 
 	/**
-	 * 所有任务实体
+	 * 所有作业实体
 	 */
 	private JobPlugin[] jobEntries = null;
 
@@ -197,7 +197,7 @@ public class ImetaJobService implements ImetaJobDelegate {
 	}
 
 	/**
-	 * 通过用户登录名清除正在编辑的任务
+	 * 通过用户登录名清除正在编辑的作业
 	 * 
 	 * @param rep
 	 * @param loginName
@@ -340,7 +340,7 @@ public class ImetaJobService implements ImetaJobDelegate {
 	}
 
 	/**
-	 * 加入任务的实体
+	 * 加入作业的实体
 	 * 
 	 * @throws ImetaException
 	 */

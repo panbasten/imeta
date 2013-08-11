@@ -79,7 +79,7 @@
 								},{
 									"attr" : {
 										"id" : "jobTools",
-										"label" : "任务",
+										"label" : "作业",
 										"width" : "123px"
 									},
 									"menuItems" : [{
@@ -317,7 +317,7 @@
 										"enabled" : true
 									},{
 										"value" : "fileNewJob",
-										"label" : "ETL任务",
+										"label" : "ETL作业",
 										"accessKey" : "ctrl-alt-n",
 										"imgCls" : "fileNewJob",
 										"width" : "50px",
@@ -472,7 +472,7 @@
 									},
 									"menuItems" : [{
 										"value" : "jobStart",
-										"label" : "任务",
+										"label" : "作业",
 										"accessKey" : "ctrl-alt-n",
 										"imgCls" : "jobStart",
 										"width" : "94px",
@@ -577,7 +577,7 @@
 										"enabled" : true
 									},{
 										"value" : "showEntryPlugin",
-										"label" : "显示任务插件",
+										"label" : "显示作业插件",
 										"accessKey" : "ctrl-alt-n",
 										"imgCls" : "showEntryPlugin",
 										"width" : "90px",

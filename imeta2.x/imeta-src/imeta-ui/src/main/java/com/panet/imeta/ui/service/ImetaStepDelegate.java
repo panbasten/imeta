@@ -22,7 +22,7 @@ public interface ImetaStepDelegate {
 			throws ImetaException;
 
 	/**
-	 * 编辑任务节点
+	 * 编辑作业节点
 	 * 
 	 * @param id
 	 * @param jobMeta

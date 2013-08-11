@@ -1686,7 +1686,7 @@ body.x-body-masked .x-window-plain .x-window-mc{background:#C7D6E9;}
 	background:transparent url(../images/imeta/menuBtn/fileNewTrans.png) no-repeat 50% 0 !important;
 	width:32px;
 }
-/*ETL任务*/
+/*ETL作业*/
 .fileNewJob {
 	background:transparent url(../images/imeta/menuBtn/fileNewJob.png) no-repeat 50% 0 !important;
 	width:32px;
@@ -1881,7 +1881,7 @@ body.x-body-masked .x-window-plain .x-window-mc{background:#C7D6E9;}
 	background:transparent url(../images/imeta/menuBtn/copyTable.png) no-repeat 50% 0 !important;
 	width:32px;
 }
-/*任务启动项*/
+/*作业启动项*/
 .jobStart {
 	background:transparent url(../images/imeta/menuBtn/jobStart.png) no-repeat 50% 0 !important;
 	width:32px;
@@ -1891,7 +1891,7 @@ body.x-body-masked .x-window-plain .x-window-mc{background:#C7D6E9;}
 	background:transparent url(../images/imeta/menuBtn/showStepPlugin.png) no-repeat 50% 0 !important;
 	width:32px;
 }
-/*显示任务插件*/
+/*显示作业插件*/
 .showEntryPlugin {
 	background:transparent url(../images/imeta/menuBtn/showEntryPlugin.png) no-repeat 50% 0 !important;
 	width:32px;

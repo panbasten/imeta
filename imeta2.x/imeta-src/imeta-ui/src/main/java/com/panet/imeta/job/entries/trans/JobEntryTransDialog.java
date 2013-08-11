@@ -96,7 +96,7 @@ public class JobEntryTransDialog extends JobEntryDialog implements
 	private LabelInputMeta paramsFromPrevious;
 
 	/**
-	 * 传递父任务变量到转换中
+	 * 传递父作业变量到转换中
 	 */
 	private LabelInputMeta passingAllParameters;
 
@@ -165,9 +165,9 @@ public class JobEntryTransDialog extends JobEntryDialog implements
 			this.columnFormDataMeta = new ColumnFormDataMeta(id, null);
 			this.columnFormMeta = new ColumnFormMeta(columnFormDataMeta);
 
-			// 得到任务项名称
-			this.name = new LabelInputMeta(id + ".name", "任务项名称", null, null,
-					"任务项名称必须填写", super.getJobEntryName(), null, ValidateForm
+			// 得到作业项名称
+			this.name = new LabelInputMeta(id + ".name", "作业项名称", null, null,
+					"作业项名称必须填写", super.getJobEntryName(), null, ValidateForm
 							.getInstance().setRequired(true));
 			this.name.setSingle(true);
 
@@ -353,9 +353,9 @@ public class JobEntryTransDialog extends JobEntryDialog implements
 			/*******************************************************************
 			 * 标签4 变量
 			 ******************************************************************/
-			// 传递父任务变量到转换中
+			// 传递父作业变量到转换中
 			this.passingAllParameters = new LabelInputMeta(id
-					+ ".passingAllParameters", "传递父任务变量到转换中", null, null, null,
+					+ ".passingAllParameters", "传递父作业变量到转换中", null, null, null,
 					String.valueOf(je.passingAllParameters),
 					InputDataMeta.INPUT_TYPE_CHECKBOX, null);
 			this.passingAllParameters.setSingle(true);

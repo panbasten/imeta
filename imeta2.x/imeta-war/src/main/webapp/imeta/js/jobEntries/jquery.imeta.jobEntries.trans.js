@@ -48,7 +48,7 @@ jQuery.imeta.jobEntries.trans = {
 			$
 					.ajax( {
 						type : "POST",
-						url : "ImetaAction!detectRep.action",
+						url : "ImetaDBAction!detectRep.action",
 						dataType : "json",
 						data : jQuery.cutil
 								.objectToUrl( {

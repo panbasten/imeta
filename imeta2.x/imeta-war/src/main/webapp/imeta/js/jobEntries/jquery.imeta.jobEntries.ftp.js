@@ -11,7 +11,7 @@ jQuery.imeta.jobEntries.ftp = {
 
 			$("#" + id).ajaxSubmit( {
 				type : "POST",
-				url : "ImetaAction!testDatabase.action",
+				url : "ImetaDBAction!testDatabase.action",
 				dataType : "json",
 				data : {
 					id : id,

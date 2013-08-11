@@ -236,7 +236,7 @@ public class JobMeta extends ChangedFlag implements Cloneable,
 				+ Messages.getString("JobMeta.Element.JobEntry") + "</span>");
 		if (jobEntries != null && jobEntries.size() > 0) {
 			ro.append("<ul id='" + fileId + "_step'>");
-			// 循环任务项目
+			// 循环作业项目
 			Iterator<JobEntryCopy> jeIter = jobEntries.iterator();
 			JobEntryCopy je;
 			while (jeIter.hasNext()) {
@@ -1242,7 +1242,7 @@ public class JobMeta extends ChangedFlag implements Cloneable,
 
 	public void setInfo(Map<String, String[]> p, String id)
 			throws KettleException {
-		// 0 任务
+		// 0 作业
 		description = BaseStepMeta
 				.parameterToString(p.get(id + ".description"));
 		extendedDescription = BaseStepMeta.parameterToString(p.get(id

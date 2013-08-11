@@ -86,7 +86,7 @@ public class Trans implements VariableSpace, NamedParams {
 	private Repository repository;
 
 	/**
-	 * 调用这个“转换”的“任务”。<br>
+	 * 调用这个“转换”的“作业”。<br>
 	 * 这使我们获得整个链条，包括父变量等等。
 	 */
 	private Job parentJob;
@@ -107,7 +107,7 @@ public class Trans implements VariableSpace, NamedParams {
 	private long batchId;
 
 	/**
-	 * 这是批量ID，是通过从“任务”到“任务”的“转换”。<br>
+	 * 这是批量ID，是通过从“作业”到“作业”的“转换”。<br>
 	 * 如果没有通过的，这个就是“转换”的批量ID
 	 */
 	private long passedBatchId;

@@ -95,7 +95,7 @@ public class ImetaWebServiceImpl implements ImetaWebService {
 				JobMeta jobMeta = jobs.newJobMetaByName(rep, d.getID(),
 						objectName);
 				if (jobMeta.getJobstatus() != JobMeta.JOBSTATUS_PRODUCTION) {
-					ms = "任务未处于生产状态，不能被执行！";
+					ms = "作业未处于生产状态，不能被执行！";
 				} else {
 					Job job = null;
 					job = jobs.getActiveJobByName(rep, d.getID(), objectName);
@@ -107,9 +107,9 @@ public class ImetaWebServiceImpl implements ImetaWebService {
 						job.getJobMeta().setArguments(jobMeta.getArguments());
 						job.shareVariablesWith(jobMeta);
 						job.start();
-						ms = "任务执行成功！";
+						ms = "作业执行成功！";
 					} else {
-						ms = "任务正在运行！";
+						ms = "作业正在运行！";
 					}
 				}
 
@@ -123,7 +123,7 @@ public class ImetaWebServiceImpl implements ImetaWebService {
 				ms = "转换执行失败";
 			} else if (RepositoryObject.STRING_OBJECT_TYPE_JOB
 					.equals(objectType)) {
-				ms = "任务执行失败";
+				ms = "作业执行失败";
 			}
 		}
 		return ms;
@@ -171,7 +171,7 @@ public class ImetaWebServiceImpl implements ImetaWebService {
 				ms = "转换暂停/恢复操作失败！";
 			} else if (RepositoryObject.STRING_OBJECT_TYPE_JOB
 					.equals(objectType)) {
-				ms = "任务暂停/恢复操作失败！";
+				ms = "作业暂停/恢复操作失败！";
 			}
 		}
 		return ms;
@@ -203,9 +203,9 @@ public class ImetaWebServiceImpl implements ImetaWebService {
 					job.stopAll();
 					job.endProcessing("stop", new Result());
 					job.waitUntilFinished(5000);
-					ms = "任务停止成功！";
+					ms = "作业停止成功！";
 				} else {
-					ms = "任务未运行或者已经停止运行！";
+					ms = "作业未运行或者已经停止运行！";
 				}
 			}
 		} catch (Exception e) {
@@ -216,7 +216,7 @@ public class ImetaWebServiceImpl implements ImetaWebService {
 				ms = "转换停止操作失败！";
 			} else if (RepositoryObject.STRING_OBJECT_TYPE_JOB
 					.equals(objectType)) {
-				ms = "任务停止操作失败！";
+				ms = "作业停止操作失败！";
 			}
 		}
 		return ms;

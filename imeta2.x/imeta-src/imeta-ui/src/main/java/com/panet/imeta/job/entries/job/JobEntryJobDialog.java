@@ -130,18 +130,18 @@ public class JobEntryJobDialog extends JobEntryDialog implements
 			this.columnFormDataMeta = new ColumnFormDataMeta(id, null);
 			this.columnFormMeta = new ColumnFormMeta(columnFormDataMeta);
 
-			// 得到任务项名称
-			this.name = new LabelInputMeta(id + ".name", "任务项名称", null, null,
-					"任务名称必须填写", super.getJobEntryName(), null, ValidateForm
+			// 得到作业项名称
+			this.name = new LabelInputMeta(id + ".name", "作业项名称", null, null,
+					"作业名称必须填写", super.getJobEntryName(), null, ValidateForm
 							.getInstance().setRequired(true));
 			this.name.setSingle(true);
 
-			// 任务名称
-			this.jobname = new LabelInputMeta(id + ".jobname", "任务名称", null,
-					null, "任务名称必须填写", je.getJobName(), null, ValidateForm
+			// 作业名称
+			this.jobname = new LabelInputMeta(id + ".jobname", "作业名称", null,
+					null, "作业名称必须填写", je.getJobName(), null, ValidateForm
 							.getInstance().setRequired(true));
 			this.jobNameBtn = new ButtonMeta(id + ".btn.jobName", id
-					+ ".btn.jobName", "任务", "任务");
+					+ ".btn.jobName", "作业", "作业");
 			this.jobNameBtn
 					.addClick("jQuery.imeta.jobEntries.job.btn.jobnameBtn");
 			this.jobname.addButton(new ButtonMeta[] { this.jobNameBtn });
@@ -229,13 +229,13 @@ public class JobEntryJobDialog extends JobEntryDialog implements
 
 			// Wait for the job
 			this.waitingToFinish = new LabelInputMeta(id + ".waitingToFinish",
-					"等待远程任务完成", null, null, null, String
+					"等待远程作业完成", null, null, null, String
 							.valueOf(je.waitingToFinish),
 					InputDataMeta.INPUT_TYPE_CHECKBOX, null);
 
 			// Follow local abort to remote
 			this.followingAbortRemotely = new LabelInputMeta(id
-					+ ".followingAbortRemotely", "随着本地中止结束远程任务", null, null,
+					+ ".followingAbortRemotely", "随着本地中止结束远程作业", null, null,
 					null, String.valueOf(je.followingAbortRemotely),
 					InputDataMeta.INPUT_TYPE_CHECKBOX, null);
 

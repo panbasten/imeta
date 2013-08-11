@@ -221,11 +221,11 @@ public class RepExplorerDialog implements BaseDialogInterface {
 
 				}
 			}
-			// 查找当前目录下的任务
+			// 查找当前目录下的作业
 			List<RepositoryObject> jobList = this.rep.getJobObjects(pTree
 					.getID());
 			if (jobList != null && jobList.size() > 0) {
-				// 遍历得到的任务
+				// 遍历得到的作业
 				for (RepositoryObject ro : jobList) {
 					TreeNodeDataMeta roLeft = new TreeNodeDataMeta(null,
 							"file job-file " + id + "-element", ro.getName(),
@@ -400,10 +400,10 @@ public class RepExplorerDialog implements BaseDialogInterface {
 			nodes_0.putSubNode(transNodes);
 
 		}
-		// 5 任务
+		// 5 作业
 		if (job) {
 			TreeNodeDataMeta jobNodes = new TreeNodeDataMeta(id + "_job", null,
-					"任务", "任务", true, false);
+					"作业", "作业", true, false);
 			jobNodes.putSubNode(getJobTree(directory));
 
 			nodes_0.putSubNode(jobNodes);

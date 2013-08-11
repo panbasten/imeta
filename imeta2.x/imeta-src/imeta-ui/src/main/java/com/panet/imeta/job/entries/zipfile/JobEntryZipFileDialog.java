@@ -33,7 +33,7 @@ public class JobEntryZipFileDialog extends JobEntryDialog implements
 	private ColumnFormDataMeta columnFormDataMeta;
 
 	/**
-	 * 任务条目名称
+	 * 作业条目名称
 	 */
 	private LabelInputMeta name;
 
@@ -152,9 +152,9 @@ public class JobEntryZipFileDialog extends JobEntryDialog implements
 			this.columnFormDataMeta = new ColumnFormDataMeta(id, null);
 			this.columnFormMeta = new ColumnFormMeta(columnFormDataMeta);
 
-			// 任务条目名称
-			this.name = new LabelInputMeta(id + ".name", "任务条目名称", null, null,
-					"任务条目名称必须填写", super.getJobEntryName(), null, ValidateForm
+			// 作业条目名称
+			this.name = new LabelInputMeta(id + ".name", "作业条目名称", null, null,
+					"作业条目名称必须填写", super.getJobEntryName(), null, ValidateForm
 							.getInstance().setRequired(true));
 			this.name.setSingle(true);
 

@@ -634,7 +634,7 @@ jQuery.imetabar = {
     	$("#iov-by").html("重新加载中...");
     	$.ajax({
             type: "GET",
-            url: "ImetaAction!loadRepositoryObjects.action",
+            url: "ImetaDBAction!loadRepositoryObjects.action",
             dataType: "json",
             success : function(json){
                 $("#iov-by").empty();
@@ -778,7 +778,7 @@ jQuery.imetabar = {
             var treeId = e.getAttribute("treeId");
             $.ajax({
                 type: "POST",
-                url: "ImetaAction!loadRepositoryObjectByName.action",
+                url: "ImetaDBAction!loadRepositoryObjectByName.action",
                 data: jQuery.cutil.objectToUrl({
 	                	roName : e.getAttribute("objectName"),
 	                	directoryId : e.getAttribute("directoryId"),
@@ -815,25 +815,39 @@ jQuery.imetabar = {
 				                    title: (dbName)?dbName:(stepName)?stepName:"",
 				                    showLoading : true
 				                });
-						
-		                $.ajax({
-			                type: "POST",
-			                url: "ImetaAction!settingElement.action",
-			                data: jQuery.cutil.objectToUrl({
-			                	elementType : elementType,
-			                	elementId : elementId,
-			                	roName : roName,
-			                	roType : roType,
-			                	stepName : stepName,
-			                	stepType : stepType,
-			                	directoryId : directoryId
-			                }),
-			                dataType: "json",
-			                success : function(json){
-			                	win.appendContent(json);
-			                },
-			                error : globalError
-			          	});
+						if(elementType == "database"){
+							$.ajax({
+				                type: "POST",
+				                url: "ImetaDBAction!settingDatabase.action",
+				                data: jQuery.cutil.objectToUrl({
+				                	elementId : elementId
+				                }),
+				                dataType: "json",
+				                success : function(json){
+				                	win.appendContent(json);
+				                },
+				                error : globalError
+				          	});
+						} else if(elementType == "step"){
+							$.ajax({
+								type: "POST",
+				                url: "ImetaAction!editElement.action",
+				                data: jQuery.cutil.objectToUrl({
+				                	elementId : elementId,
+				                	roName : roName,
+				                	roType : roType,
+				                	stepName : stepName,
+				                	stepType : stepType,
+				                	directoryId : directoryId
+				                }),
+				                dataType: "json",
+				                success : function(json){
+				                	win.appendContent(json);
+				                },
+				                error : globalError
+				          	});
+						}
+		               
 			          	
 		            });
 		            $("." + treeId + "-setting").mouseover(function(e){

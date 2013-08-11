@@ -19,13 +19,13 @@ jQuery.imeta.jobEntries.job = {
 			var id = elId.split(".")[0];
 			var win = $.iformwindow('#ibody', {
 				id : id + "_jobnameBtn",
-				title : '选择任务',
+				title : '选择作业',
 				showLoading : true
 			});
 
 			$.ajax( {
 				type : "POST",
-				url : "ImetaAction!detectRep.action",
+				url : "ImetaDBAction!detectRep.action",
 				dataType : "json",
 				data : jQuery.cutil.objectToUrl( {
 							id : id + "_jobnameBtn",

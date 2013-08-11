@@ -60,7 +60,7 @@ jQuery.imetalogin = {
     	var okBtnClick = function(e,v){
 	    	$.ajax({
                 type: "POST",
-                url: "ImetaAction!login.action",
+                url: "ImetaScurityAction!login.action",
                 data: jQuery.cutil.objectToUrl({
                 	username : usernameInput.val(),
                 	password : passwordInput.val(),
@@ -116,7 +116,7 @@ jQuery.imetalogin = {
     	// 读取perpareLogin
     	$.ajax({
             type: "POST",
-            url: "ImetaAction!perpareLogin.action",
+            url: "ImetaScurityAction!perpareLogin.action",
             dataType: "json",
             success : function(json){
             	if(json.reps){
@@ -152,7 +152,7 @@ jQuery.imetalogin = {
     	var password = "";
     	$.ajax({
             type: "POST",
-            url: "ImetaAction!login.action",
+            url: "ImetaScurityAction!login.action",
             data: "username=" + username + "&password=" + password,
             //dataType: "json",
             success : function(json){

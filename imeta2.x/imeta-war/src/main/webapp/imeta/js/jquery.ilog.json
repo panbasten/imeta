@@ -10,6 +10,6 @@
 			"id" : "log_bar",
 			"class" : "log_bar"
 		},
-		"loadUrl" : "ImetaAction!loadLogBar.action"
+		"loadUrl" : "ImetaBaseAction!loadLogBar.action"
 	}]
 })

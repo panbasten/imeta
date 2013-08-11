@@ -14,8 +14,6 @@
         
         
         <link rel="stylesheet" href="<%=path%>/framework/js/_treeview/jquery.treeview.css" />
-        <link rel="stylesheet" href="<%=path%>/framework/js/_treeview/red-treeview.css" />
-        <link rel="stylesheet" href="<%=path%>/framework/js/_treeview/screen.css" />
 		<link href="<%=path%>/imeta/css/portal.css" rel="stylesheet"
 			type="text/css" />
 		<link href="<%=path%>/imeta/css/jquery.imeta.css" rel="stylesheet"
@@ -84,7 +82,11 @@
 		<script type="text/javascript"
 			src="<%=path%>/imeta/js/jquery.iform.js"></script>
 		<script type="text/javascript"
-			src="<%=path%>/imeta/js/jquery.imeta.js"></script>
+			src="<%=path%>/imeta/js/jquery.imeta.pack.js"></script>
+		<script type="text/javascript"
+			src="<%=path%>/imeta/js/jquery.imeta.steps.pack.js"></script>
+		<script type="text/javascript"
+			src="<%=path%>/imeta/js/jquery.imeta.jobEntries.pack.js"></script>
 		
 	</head>
 	<body id="ibody" style="overflow:hidden">

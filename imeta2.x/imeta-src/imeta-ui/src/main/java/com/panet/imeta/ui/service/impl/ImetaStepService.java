@@ -67,7 +67,7 @@ public class ImetaStepService implements ImetaStepDelegate {
 	}
 
 	/**
-	 * 编辑任务节点
+	 * 编辑作业节点
 	 * 
 	 * @param id
 	 * @param jobMeta

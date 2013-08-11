@@ -12,7 +12,7 @@ jQuery.imeta.job = {
 		        });
 		        $.ajax({
 		            type: "POST",
-		            url: "ImetaAction!getDirectory.action",
+		            url: "ImetaBaseAction!getDirectory.action",
 		            data: jQuery.cutil.objectToUrl({
 		                id : "getDirectory",
 		                customOkFn : "jQuery.imeta.job.setting.btn.pathBtnOk",
